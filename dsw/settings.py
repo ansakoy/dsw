@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 from private import PRIVATE
 
@@ -108,6 +109,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+LANGUAGES = [
+    ('ru', _('Russian')),
+    ('hy', _('Armenian')),
+    ('en', _('English')),
+]
 
 LANGUAGE_CODE = 'en-us'
 
@@ -119,6 +125,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
