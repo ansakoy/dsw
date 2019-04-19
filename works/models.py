@@ -2,12 +2,15 @@ from django.db import models
 
 
 class Genre(models.Model):
+    genre_id = models.CharField(max_length=10, primary_key=True, default='000')
     name_ru = models.CharField(max_length=250, null=True)
     name_hy = models.CharField(max_length=250, null=True)
     name_en = models.CharField(max_length=250, null=True)
 
     def __str__(self):
         return self.name_ru
+    class Meta:
+        app_label = 'works'
 
 
 class Person(models.Model):
@@ -55,21 +58,54 @@ class Opus(models.Model):
         return "{} - {}".format(self.title_ru, self.title_hy)
 
 
+class Band(models.Model):
+    band_id = models.CharField(max_length=10, primary_key=True, default='00000')
+    url = models.CharField(max_length=1000, null=True)
+    type_ru = models.CharField(max_length=100, null=True)
+    name_ru = models.CharField(max_length=100, null=True)
+    type_hy = models.CharField(max_length=100, null=True)
+    name_hy = models.CharField(max_length=100, null=True)
+    type_en = models.CharField(max_length=100, null=True)
+    name_en = models.CharField(max_length=100, null=True)
+    # performances is declared as a reverse relation from Performance
+    # performances = OneToManyField(Performance, verbose_name="Исполнения")
+
+    def __str__(self):
+        return '{} "{}"'.format(self.type_ru, self.name_ru)
+
+
 class Performance(models.Model):
+    performance_id = models.CharField(max_length=10, primary_key=True, default='0000')
     opus = models.ForeignKey(
         Opus,
         on_delete=models.CASCADE,
         related_name='performances',
         verbose_name="Сочинение",
     )
-    performance_url = models.CharField(max_length=1000)
+    video_url = models.CharField(max_length=1000, null=True)
+    audio_url = models.CharField(max_length=1000, null=True)
     perform_date = models.DateField(null=True)
-    location = models.CharField(max_length=500, null=True)
+    conductor = models.ForeignKey(
+        Person,
+        on_delete=models.SET_NULL,
+        related_name='performances',
+        verbose_name="Дирижер",
+        null=True
+    )
+    band = models.ForeignKey(
+        'Band',
+        on_delete=models.SET_NULL,
+        related_name='performances',
+        verbose_name="Исполнительский коллектив",
+        null=True
+    )
+    # location = models.CharField(max_length=500, null=True)
     # performers is declared as a reverse relation from Performer
     # performers = OneToManyField(Performer, verbose_name="Исполнители")
 
     def __str__(self):
         return "{} - {}".format(self.perform_date, self.opus)
+
 
 
 class Performer(models.Model):
@@ -84,6 +120,7 @@ class Performer(models.Model):
         on_delete=models.SET_NULL,
         related_name='performers',
         verbose_name="Исполнение",
+        null=True
     )
 
     def __str__(self):
