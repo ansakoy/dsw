@@ -31,9 +31,12 @@ class Opus(models.Model):
     title_ru = models.CharField(max_length=500)
     title_hy = models.CharField(max_length=500)
     title_en = models.CharField(max_length=500)
-    comment_ru = models.CharField(max_length=1000)
-    comment_hy = models.CharField(max_length=1000)
-    comment_en = models.CharField(max_length=1000)
+    subtitle_ru = models.CharField(max_length=500, null=True)
+    subtitle_hy = models.CharField(max_length=500, null=True)
+    subtitle_en = models.CharField(max_length=500, null=True)
+    comment_ru = models.CharField(max_length=1000, null=True)
+    comment_hy = models.CharField(max_length=1000, null=True)
+    comment_en = models.CharField(max_length=1000, null=True)
     year = models.CharField(max_length=4, null=True)
     # performances is declared as a reverse relation from Performance
     # performances = OneToManyField(Performance, verbose_name="Исполнения")
@@ -81,7 +84,11 @@ class Performance(models.Model):
         on_delete=models.CASCADE,
         related_name='performances',
         verbose_name="Сочинение",
+        null=True
     )
+    name_ru = models.CharField(max_length=1000, null=True)
+    name_hy = models.CharField(max_length=1000, null=True)
+    name_en = models.CharField(max_length=1000, null=True)
     video_url = models.CharField(max_length=1000, null=True)
     audio_url = models.CharField(max_length=1000, null=True)
     perform_date = models.DateField(null=True)
