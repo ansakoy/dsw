@@ -57,6 +57,9 @@ class Opus(models.Model):
         verbose_name="Авторы текста",
     )
 
+    class Meta:
+        verbose_name_plural = "opera"
+
     def __str__(self):
         return "{} - {}".format(self.title_ru, self.title_hy)
 
@@ -111,7 +114,7 @@ class Performance(models.Model):
     # performers = OneToManyField(Performer, verbose_name="Исполнители")
 
     def __str__(self):
-        return "{} - {}".format(self.perform_date, self.opus)
+        return "{} - {}".format(self.opus, self.name_ru)
 
 
 
