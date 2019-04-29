@@ -1,0 +1,57 @@
+{% extends 'works/base.html' %}
+{% load i18n %}
+
+
+{% block page_content %}
+<div class="page-header-box col-md-9">
+<h1 class="page-header">Каталог сочинений</h1>
+</div>
+<div class="container condition">
+    <h3>{% block condition %}{% endblock %}</h3>
+</div>
+
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-md-9 posts-results">
+            {% if works %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if LANGUAGE_CODE == 'ru' %}
+                    {% for opus in works %}
+                        <div class="container opus">
+                            <h2><a href="#" class="opus-title">{{ opus.title_ru }}</a></h2>
+                            <h3 class="opus_subtitle">{{ opus.subtitle_ru }}</h3>
+                            <p class="opus_comment">{{ opus.comment_ru }}</p>
+                            <p class="opus_year">{{ opus.year }}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% elif LANGUAGE_CODE == 'hy' %}
+                    {% for opus in works %}
+                        <div class="container opus">
+                            <h2><a href="#" class="opus-title">{{ opus.title_hy }}</a></h2>
+                            <p class="opus_subtitle">{{ opus.subtitle_hy }}</p>
+                            <p class="opus_comment">{{ opus.comment_hy }}</p>
+                            <p class="opus_year">{{ opus.year }}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% else %}
+                    {% for opus in works %}
+                        <div class="container opus">
+                            <h2><a href="#" class="opus-title">{{ opus.title_en }}</a></h2>
+                            <p class="opus_subtitle">{{ opus.subtitle_en }}</p>
+                            <p class="opus_comment">{{ opus.comment_en }}</p>
+                            <p class="opus_year">{{ opus.year }}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
+
+            {% else %}
+            <h2>{% block no_works %}{% endblock %}</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from django.utils.translation import ugettext_lazy as _
+from django.conf import global_settings
 
 from .private import PRIVATE
 
@@ -117,7 +118,24 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
+EXTRA_LANG_INFO = {
+    'hy': {
+        'bidi': False,
+        'code': 'hy',
+        'name': 'Armenian',
+        'name_local': 'Հայերեն',
+
+    }}
+
+# Add custom languages not provided by Django
+# https://stackoverflow.com/questions/12946830/how-to-add-new-languages-into-django-my-language-uyghur-or-uighur-is-not-su
+import django.conf.locale
+LANG_INFO = dict(django.conf.locale.LANG_INFO, **EXTRA_LANG_INFO)
+django.conf.locale.LANG_INFO = LANG_INFO
+
+
 LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'hy'
 
 TIME_ZONE = 'UTC'
 

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'works/base.html' %}
+
 {% load i18n %}
 
-<h2>{% trans 'Русская страница' %}</h2>
+{% block page_content %}
+<h2>{% trans "Русская страница" %}</h2>
 
-</body>
-</html>
+<h2>{% trans "Some other text" %}</h2>
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<h2>{{ LANGUAGE_CODE }}</h2>
+{% endblock %}

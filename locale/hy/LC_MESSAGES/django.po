@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-25 12:04+0300\n"
+"POT-Creation-Date: 2019-04-26 13:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\dsw\settings.py:114
+#: .\dsw\settings.py:115
 msgid "Russian"
 msgstr ""
 
-#: .\dsw\settings.py:115
+#: .\dsw\settings.py:116
 msgid "Armenian"
 msgstr ""
 
-#: .\dsw\settings.py:116
+#: .\dsw\settings.py:117
 msgid "English"
 msgstr ""
 
 #: .\works\templates\works\home.html:10
 msgid "Русская страница"
 msgstr "Հայկական էջ"
+
+#: .\works\templates\works\home.html:12
+msgid "Some other text"
+msgstr "Բարարան օնլայն շատ լավ է"

@@ -16,7 +16,7 @@ class CatalogView(generic.ListView):
     def get_queryset(self):
         """Return posts ordered by year"""
         all_works = Opus.objects.order_by('-year')
-        paginator = Paginator(all_works, 5)
+        paginator = Paginator(all_works, 10)
         page = self.request.GET.get('page')
         works = paginator.get_page(page)
         return works
