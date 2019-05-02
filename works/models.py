@@ -87,27 +87,30 @@ class Performance(models.Model):
         on_delete=models.CASCADE,
         related_name='performances',
         verbose_name="Сочинение",
-        null=True
+        null=True,
+        blank=True
     )
-    name_ru = models.CharField(max_length=1000, null=True)
-    name_hy = models.CharField(max_length=1000, null=True)
-    name_en = models.CharField(max_length=1000, null=True)
-    video_url = models.CharField(max_length=1000, null=True)
-    audio_url = models.CharField(max_length=1000, null=True)
-    perform_date = models.DateField(null=True)
+    name_ru = models.CharField(max_length=1000, null=True, blank=True)
+    name_hy = models.CharField(max_length=1000, null=True, blank=True)
+    name_en = models.CharField(max_length=1000, null=True, blank=True)
+    video_url = models.CharField(max_length=1000, null=True, blank=True)
+    audio_url = models.CharField(max_length=1000, null=True, blank=True)
+    perform_date = models.DateField(null=True, blank=True)
     conductor = models.ForeignKey(
         Person,
         on_delete=models.SET_NULL,
         related_name='performances',
         verbose_name="Дирижер",
-        null=True
+        null=True,
+        blank=True
     )
     band = models.ForeignKey(
         'Band',
         on_delete=models.SET_NULL,
         related_name='performances',
         verbose_name="Исполнительский коллектив",
-        null=True
+        null=True,
+        blank=True
     )
     # location = models.CharField(max_length=500, null=True)
     # performers is declared as a reverse relation from Performer

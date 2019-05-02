@@ -12,45 +12,85 @@
 
 <div class="container pt-4">
     <div class="row">
-        <div class="col-md-9 posts-results">
+        <div class="col-md-8 works-results">
             {% if works %}
+            <table class="works-table">
                 {% get_current_language as LANGUAGE_CODE %}
                 {% if LANGUAGE_CODE == 'ru' %}
-                    {% for opus in works %}
-                        <div class="container opus">
-                            <h2><a href="#" class="opus-title">{{ opus.title_ru }}</a></h2>
-                            <h3 class="opus_subtitle">{{ opus.subtitle_ru }}</h3>
-                            <p class="opus_comment">{{ opus.comment_ru }}</p>
-                            <p class="opus_year">{{ opus.year }}</p>
-                        </div>
-                        <hr>
-                    {% endfor %}
-                {% elif LANGUAGE_CODE == 'hy' %}
-                    {% for opus in works %}
-                        <div class="container opus">
-                            <h2><a href="#" class="opus-title">{{ opus.title_hy }}</a></h2>
-                            <p class="opus_subtitle">{{ opus.subtitle_hy }}</p>
-                            <p class="opus_comment">{{ opus.comment_hy }}</p>
-                            <p class="opus_year">{{ opus.year }}</p>
-                        </div>
-                        <hr>
-                    {% endfor %}
-                {% else %}
-                    {% for opus in works %}
-                        <div class="container opus">
-                            <h2><a href="#" class="opus-title">{{ opus.title_en }}</a></h2>
-                            <p class="opus_subtitle">{{ opus.subtitle_en }}</p>
-                            <p class="opus_comment">{{ opus.comment_en }}</p>
-                            <p class="opus_year">{{ opus.year }}</p>
-                        </div>
-                        <hr>
-                    {% endfor %}
+
+                {% for opus in works %}
+                    <tr>
+
+                        <td>
+                            {% if opus.performances.count %}
+                                <a href="{% url 'works:opus'  opus.pk %}" class="performance-marker"><i class="fas fa-music"></i></a>
+                            {% endif %}
+                        </td>
+
+                        <td>
+                            <div class="container opus">
+                                <h2><a href="{% url 'works:opus'  opus.pk %}" class="opus-title">{{ opus.title_ru }}</a></h2>
+                                <h3 class="opus_subtitle">{{ opus.subtitle_ru }}</h3>
+                                <p class="opus_year">{{ opus.year }}</p>
+                            </div>
+                        </td>
+
+                    </tr>
+                {% endfor %}
                 {% endif %}
 
+            </table>
             {% else %}
             <h2>{% block no_works %}{% endblock %}</h2>
             {% endif %}
         </div>
+        <div class="container col-md-4 filter-panel">
+            <div class="categories">
+                <h2>test2</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="container footer">
+    <div class="paginator-box">
+        {% if works.paginator.num_pages > 1 %}
+        <nav>
+          <ul class="pagination mx-auto text-center">
+              {% if works.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ works.previous_page_number }}" tabindex="-1">&laquo; </a>
+                </li>
+              {% else %}
+              <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">&laquo; </a>
+                </li>
+              {% endif %}
+
+              {% for page_num in works.paginator.page_range %}
+              {% if page_num == works.number %}
+              <li class="page-item active"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+              {% else %}
+              <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+              {% endif %}
+              {% endfor %}
+
+              {% if works.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ works.next_page_number }}"> &raquo;</a>
+            </li>
+              {% else %}
+              <li class="page-item disabled">
+              <a class="page-link" href="#"> &raquo;</a>
+            </li>
+              {% endif %}
+          </ul>
+        </nav>
+        {% endif %}
     </div>
 </div>
 
