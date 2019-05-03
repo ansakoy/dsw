@@ -10,4 +10,5 @@ urlpatterns = [
     path('catalog/', views.CatalogView.as_view(), name='catalog'),
     path('bio/', views.bio, name='bio'),
     path('about/', views.about, name='about'),
+    # path('category/', views.CategoryView.as_view(), name='category'),
 ]

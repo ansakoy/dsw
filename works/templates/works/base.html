@@ -36,7 +36,7 @@
       <form action="{% url 'set_language' %}" method="post">
           {% csrf_token %}
           <input type="hidden" name="text" value="{{ redirect_to }}">
-          <select name="language" id="">
+          <select name="language" class="form-control" onchange="this.form.submit()">
               {% get_available_languages as LANGUAGES %}
               {% get_language_info_list for LANGUAGES as languages %}
               {% for language in languages %}
@@ -45,7 +45,7 @@
                 </option>
               {% endfor %}
           </select>
-          <input type="submit" value="Выбрать">
+          <!--<input type="submit" value="Выбрать">-->
       </form>
     <form class="form-inline my-2 my-lg-0" action="#" method="get">
       <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search" name="q">

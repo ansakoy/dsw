@@ -1,0 +1,7 @@
+{% extends 'works/base_catalog.html' %}
+{% load i18n %}
+
+
+{% block condition %}
+<h3>{{ cat_info.name_ru }}: найдено {{ works.paginator.count }} </h3>
+{% endblock %}

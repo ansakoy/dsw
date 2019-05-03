@@ -20,8 +20,8 @@
                 {% if opus.libretto_by.count == 1 %}
                 <p class="opus_libretto">Автор либретто: {{ opus.libretto_by.first.fname_ru }} {{ opus.libretto_by.first.lname_ru }}</p>
                 {% elif opus.libretto_by.count > 1 %}
-                <p class="opus_libretto">Авторы либретто:</p>
                  <ul>
+                     <li>Авторы либретто:</li>
                     {% for entry in opus.libretto_by.all %}
                     <li>{{ entry.fname_ru }} {{ entry.lname_ru }}</li>
                     {% endfor %}
@@ -30,8 +30,8 @@
                 {% if opus.lyrics_by.count == 1 %}
                 <p class="opus_lyrics">Автор текста: {{ opus.lyrics_by.first.fname_ru }} {{ opus.lyrics_by.first.lname_ru }}</p>
                 {% elif opus.lyrics_by.count > 1 %}
-                <p class="opus_lyrics">Авторы текста:</p>
                  <ul>
+                     <li>Авторы текста:</li>
                     {% for entry in opus.lyrics_by.all %}
                     <li>{{ entry.fname_ru }} {{ entry.lname_ru }}</li>
                     {% endfor %}
