@@ -43,6 +43,7 @@ class Opus(models.Model):
     genre = models.ForeignKey(
         Genre,
         on_delete=models.PROTECT,
+        related_name="works",
         verbose_name="Жанр",
         null=True
     )

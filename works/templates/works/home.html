@@ -2,12 +2,95 @@
 
 {% load i18n %}
 
+{% load static %}
+
 {% block page_content %}
-<h2>{% trans "Русская страница" %}</h2>
+<!--<h2>{% trans "Русская страница" %}</h2>-->
 
-<h2>{% trans "Some other text" %}</h2>
+<!--<h2>{% trans "Some other text" %}</h2>-->
 
-{% get_current_language as LANGUAGE_CODE %}
+<!--{% get_current_language as LANGUAGE_CODE %}-->
 
-<h2>{{ LANGUAGE_CODE }}</h2>
+<!--<h2>{{ LANGUAGE_CODE }}</h2>-->
+
+<div class="global-container container col-md-8">
+
+<div class="container pt-4">
+<h1 class="page-header">Заголовок сайта</h1>
+</div>
+
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-md-7 works-results">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="container col-md-5 image-panel">
+            <img src='{% static "works/Sakoyan.jpg" %}' width="100%" alt="David Sakoyan">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7 works-results">
+            <h2>youtube iframe</h2>
+        </div>
+        <div class="container col-md-5 image-panel">
+            <h2>current opus info</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 works-results">
+            <h2>youtube previews scroll</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</div>
+
+{% block footer %}
+
+<div class="container footer">
+    <div class="paginator-box">
+        {% if works.paginator.num_pages > 1 %}
+        <nav>
+          <ul class="pagination mx-auto text-center">
+              {% if works.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ works.previous_page_number }}" tabindex="-1">&laquo; </a>
+                </li>
+              {% else %}
+              <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">&laquo; </a>
+                </li>
+              {% endif %}
+
+              {% for page_num in works.paginator.page_range %}
+              {% if page_num == works.number %}
+              <li class="page-item active"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+              {% else %}
+              <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+              {% endif %}
+              {% endfor %}
+
+              {% if works.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ works.next_page_number }}"> &raquo;</a>
+            </li>
+              {% else %}
+              <li class="page-item disabled">
+              <a class="page-link" href="#"> &raquo;</a>
+            </li>
+              {% endif %}
+          </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+
+
 {% endblock %}
