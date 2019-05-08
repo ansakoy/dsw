@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.core.paginator import Paginator
@@ -12,13 +14,22 @@ PERFORM_INFO = 'perform_info'
 SEARCH_INFO = 'search_info'
 CATEGORIES = 'categories'
 YEARS = 'years'
-
+CURRENT = 'current'
+ALL_PERFORM = 'all_perform'
 
 def home(request):
     '''
     Главная страница
     '''
-    return render(request, 'works/home.html')
+    performances = Performance.objects.filter(video_url__isnull=False).exclude(video_url="")
+    performance_ids = [performance.performance_id for performance in performances]
+    current = Performance.objects.get(pk=random.choice(performance_ids))
+    context = {
+        CURRENT: current,
+        ALL_PERFORM: performances
+    }
+
+    return render(request, 'works/home.html', context)
 
 
 def bio(request):
@@ -165,31 +176,34 @@ class OpusView(generic.DetailView):
         return context
 
 
-def search(request):
-    key_expression = request.GET['q']
-    try:
-        vector = SearchVector('title_ru', 'title_hy', 'title_en',
-                              'subtitle_ru', 'subtitle_hy', 'subtitle_en',
-                              'comment_ru', 'comment_hy', 'comment_en', )
-        query = SearchQuery(key_expression)
-        results = Opus.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
 
-    except Exception as e:
-        results = None
-    paginator = Paginator(results, 10)
-    page = request.GET.get('page')
-    results_pages = paginator.get_page(page)
-    context = {'works': results_pages,
-               'search_key': key_expression}
-    additional_context = get_context_for_filters(request)
-    context[YEARS] = additional_context[YEARS]
-    context[CATEGORIES] = additional_context[CATEGORIES]
-    if additional_context.get(CAT_INFO):
-        context[CAT_INFO] = additional_context[CAT_INFO]
-    if additional_context.get(YEAR_INFO):
-        context[YEAR_INFO] = additional_context[YEAR_INFO]
-    if additional_context.get(PERFORM_INFO):
-        context[PERFORM_INFO] = additional_context[PERFORM_INFO]
-    if additional_context.get(SEARCH_INFO):
-        context[SEARCH_INFO] = additional_context[SEARCH_INFO]
-    return render(request, 'works/search.html', context)
+
+
+# def search(request):
+#     key_expression = request.GET['q']
+#     try:
+#         vector = SearchVector('title_ru', 'title_hy', 'title_en',
+#                               'subtitle_ru', 'subtitle_hy', 'subtitle_en',
+#                               'comment_ru', 'comment_hy', 'comment_en', )
+#         query = SearchQuery(key_expression)
+#         results = Opus.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
+#
+#     except Exception as e:
+#         results = None
+#     paginator = Paginator(results, 10)
+#     page = request.GET.get('page')
+#     results_pages = paginator.get_page(page)
+#     context = {'works': results_pages,
+#                'search_key': key_expression}
+#     additional_context = get_context_for_filters(request)
+#     context[YEARS] = additional_context[YEARS]
+#     context[CATEGORIES] = additional_context[CATEGORIES]
+#     if additional_context.get(CAT_INFO):
+#         context[CAT_INFO] = additional_context[CAT_INFO]
+#     if additional_context.get(YEAR_INFO):
+#         context[YEAR_INFO] = additional_context[YEAR_INFO]
+#     if additional_context.get(PERFORM_INFO):
+#         context[PERFORM_INFO] = additional_context[PERFORM_INFO]
+#     if additional_context.get(SEARCH_INFO):
+#         context[SEARCH_INFO] = additional_context[SEARCH_INFO]
+#     return render(request, 'works/search.html', context)
