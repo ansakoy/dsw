@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Opus, Person, Genre, Band, Performance
+from .models import Opus, Person, Genre, Band, Performance, Performer
 
 
 class LyricsInline(admin.TabularInline):
@@ -12,6 +12,12 @@ class LibrettoInline(admin.TabularInline):
     model = Opus.libretto_by.through
     extra = 3
     verbose_name = "Lybretto by"
+
+
+class PerformancesInline(admin.StackedInline):
+    model = Performance
+    extra = 3
+    verbose_name = "Performances"
 
 
 class PersonAdmin(admin.ModelAdmin):
@@ -50,6 +56,24 @@ class GenreAdmin(admin.ModelAdmin):
     search_fields = ('name_ru',)
 
 
+class PerformerAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Meta', {
+            'fields': ['performance', 'performer']
+        }),
+        ('Ru', {
+            'fields': ['role_ru',]
+        }),
+        ('Hy', {
+            'fields': ['role_hy',]
+        }),
+        ('En', {
+            'fields': ['role_en',]
+        }),
+    ]
+    search_fields = ('role_ru',)
+
+
 class OpusAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Meta', {
@@ -66,8 +90,8 @@ class OpusAdmin(admin.ModelAdmin):
         }),
     ]
     # fields = ['title', 'text']
-    inlines = [LyricsInline, LibrettoInline]
-    list_display = ('title_ru', 'subtitle_ru', 'year')
+    inlines = [LyricsInline, LibrettoInline, PerformancesInline]
+    list_display = ('opus_id', 'title_ru', 'subtitle_ru', 'year')
     list_filter = ('year', 'genre')
     search_fields = ('title_ru', 'subtitle_ru', 'comment_ru')
 
@@ -93,7 +117,7 @@ class BandAdmin(admin.ModelAdmin):
 class PerformanceAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Meta', {
-            'fields': ['performance_id', 'video_url', 'audio_url', 'perform_date', 'conductor', 'band',]
+            'fields': ['performance_id', 'video_url', 'audio_url', 'perform_date', 'conductor', 'band', 'opus']
         }),
         ('Ru', {
             'fields': ['name_ru',]
@@ -112,3 +136,4 @@ admin.site.register(Person, PersonAdmin)
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Band, BandAdmin)
 admin.site.register(Performance, PerformanceAdmin)
+admin.site.register(Performer, PerformerAdmin)

@@ -35,7 +35,7 @@
             <iframe class="embed-responsive-item" id="vid_frame" src="https://www.youtube.com/embed/{{ current.video_url }}" frameborder="0"></iframe>
 
             </div>
-            <a href="{% url 'works:opus' current.opus.pk %}" class="opus-title">{{ current.opus.title_ru }}
+            <a href="{% url 'works:opus' current.opus.pk %}" class="opus-title" id="current_desc">{{ current.opus.title_ru }}
                 {{ current.opus.subtitle_ru }}
                     {% if current.name_ru %} - {{ current.name_ru }}{% endif %}</a>
         </div>
@@ -43,8 +43,11 @@
 
     <div class="row thumbnails">
         <div class="col-md-12 thumbnails-list">
+            <div id="thumbcarousel" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="item active">
             {% for perform in all_perform %}
-                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}'">
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}';document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}'">
                   <div class="thumb">
                     <img src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" width="150">
                   </div>
@@ -53,20 +56,16 @@
                   </div>
                 </div>
             {% endfor %}
-            <div class="arrows">
-                <div class="arrow-left">
-                    <i class="fa fa-chevron-left fa-lg"></i>
-                </div>
-                <div class="arrow-right">
-                    <i class="fa fa-chevron-right fa-lg"></i>
-                </div>
-            </div>
+        </div>
+      </div>
+                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i> </a> <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i> </a>
         </div>
     </div>
 </div>
-
-{% endblock %}
 </div>
+</div>
+{% endblock %}
+
 
 {% block footer %}
 

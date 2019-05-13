@@ -29,14 +29,14 @@ class Person(models.Model):
 class Opus(models.Model):
     opus_id = models.CharField(max_length=10, primary_key=True)
     title_ru = models.CharField(max_length=500)
-    title_hy = models.CharField(max_length=500)
-    title_en = models.CharField(max_length=500)
-    subtitle_ru = models.CharField(max_length=500, null=True)
-    subtitle_hy = models.CharField(max_length=500, null=True)
-    subtitle_en = models.CharField(max_length=500, null=True)
-    comment_ru = models.CharField(max_length=1000, null=True)
-    comment_hy = models.CharField(max_length=1000, null=True)
-    comment_en = models.CharField(max_length=1000, null=True)
+    title_hy = models.CharField(max_length=500, blank=True)
+    title_en = models.CharField(max_length=500, blank=True)
+    subtitle_ru = models.CharField(max_length=500, null=True, blank=True)
+    subtitle_hy = models.CharField(max_length=500, null=True, blank=True)
+    subtitle_en = models.CharField(max_length=500, null=True, blank=True)
+    comment_ru = models.CharField(max_length=1000, null=True, blank=True)
+    comment_hy = models.CharField(max_length=1000, null=True, blank=True)
+    comment_en = models.CharField(max_length=1000, null=True, blank=True)
     year = models.CharField(max_length=4, null=True)
     # performances is declared as a reverse relation from Performance
     # performances = OneToManyField(Performance, verbose_name="Исполнения")
@@ -62,7 +62,7 @@ class Opus(models.Model):
         verbose_name_plural = "opera"
 
     def __str__(self):
-        return "{} - {}".format(self.title_ru, self.title_hy)
+        return "{}: {} - {}".format(self.opus_id, self.title_ru, self.title_hy)
 
 
 class Band(models.Model):
@@ -118,8 +118,7 @@ class Performance(models.Model):
     # performers = OneToManyField(Performer, verbose_name="Исполнители")
 
     def __str__(self):
-        return "{} - {}".format(self.opus, self.name_ru)
-
+        return "{}: {} - {}".format(self.performance_id, self.opus, self.name_ru)
 
 
 class Performer(models.Model):
@@ -128,7 +127,9 @@ class Performer(models.Model):
         on_delete=models.CASCADE,
         verbose_name="Исполнитель"
     )
-    role = models.CharField(max_length=250)
+    role_ru = models.CharField(max_length=250)
+    role_hy = models.CharField(max_length=250, blank=True)
+    role_en = models.CharField(max_length=250, blank=True)
     performance = models.ForeignKey(
         Performance,
         on_delete=models.SET_NULL,

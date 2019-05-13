@@ -78,6 +78,11 @@
                             {% if performance.conductor %}
                                 <p>Дирижер {{ performance.conductor.fname_ru }} {{ performance.conductor.lname_ru }}</p>
                             {% endif %}
+                            {% if performance.performers.count %}
+                                {% for performer in performance.performers.all %}
+                                <p>{{ performer.role_ru }} - {{ performer.performer.fname_ru }} {{ performer.performer.lname_ru }}</p>
+                                {% endfor %}
+                            {% endif %}
                         </div>
                     {% endfor %}
                 {% endif %}
