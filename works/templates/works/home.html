@@ -41,25 +41,87 @@
         </div>
     </div>
 
-    <div class="row thumbnails">
-        <div class="col-md-12 thumbnails-list">
-            <div id="thumbcarousel" class="carousel slide" data-interval="false">
-      <div class="carousel-inner">
-        <div class="item active">
-            {% for perform in all_perform %}
-                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}';document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}'">
-                  <div class="thumb">
-                    <img src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" width="150">
-                  </div>
-                  <div class="desc">
-                    {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
-                  </div>
+    <!--Плейлист-->
+
+    <div id="carouselPlaylist" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    {% for perform in all_perform.0 %}
+                    <div class="col-sm" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}';document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}'">
+                        <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
+                        <div class="desc">
+                            {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
+                        </div>
+                    </div> <!--/col-->
+                    {% endfor %}
+                </div> <!--/row-->
+            </div> <!--/active-->
+            {% for chunk in all_perform|slice:"1:" %}
+            <div class="carousel-item">
+                <div class="row">
+                    {% for perform in chunk %}
+                    <div class="col-sm" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}';document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}'">
+                        <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
+                        <div class="desc">
+                            {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
+                        </div>
+                    </div> <!--/col-->
+                    {% endfor %}
                 </div>
+            </div> <!--/item-->
             {% endfor %}
-        </div>
-      </div>
-                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i> </a> <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i> </a>
-        </div>
+        </div> <!--/inner-->
+        <a class="carousel-control-prev" href="#carouselPlaylist" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselPlaylist" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div> <!--конец плейлиста-->
+
+
+
+        <!-- тестовый Плейлист-->
+
+    <!--<div id="carouselTest" class="carousel slide" data-ride="carousel" data-interval="false">-->
+        <!--<div class="carousel-inner">-->
+            <!--<div class="carousel-item active">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/444" alt="1 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/ccff00" alt="2 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100" alt="3 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/444" alt="1 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/ccff00" alt="2 slide">TEXT</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="carousel-item">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/ccff00/?text=Test" alt="4 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/444" alt="5 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/ddd" alt="6 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/444" alt="5 slide">TEXT</div>-->
+                    <!--<div class="col-sm"><img class="d-block w-100" src="//placehold.it/150x100/ddd" alt="6 slide">TEXT</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<a class="carousel-control-prev" href="#carouselTest" role="button" data-slide="prev">-->
+            <!--<i class="fa fa-chevron-left fa-lg text-muted"></i>-->
+            <!--<span class="sr-only">Previous</span>-->
+        <!--</a>-->
+        <!--<a class="carousel-control-next text-faded" href="#carouselTest" role="button" data-slide="next">-->
+            <!--<i class="fa fa-chevron-right fa-lg text-muted"></i>-->
+            <!--<span class="sr-only">Next</span>-->
+        <!--</a>-->
+
+    <!--</div> &lt;!&ndash;конец тестового плейлиста&ndash;&gt;-->
+
+
+
     </div>
 </div>
 </div>

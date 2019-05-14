@@ -24,9 +24,18 @@ def home(request):
     performances = Performance.objects.filter(video_url__isnull=False).exclude(video_url="")
     performance_ids = [performance.performance_id for performance in performances]
     current = Performance.objects.get(pk=random.choice(performance_ids))
+
+    def chunks(l, n):
+        """Yield successive n-sized chunks from l."""
+        for i in range(0, len(l), n):
+            yield l[i:i + n]
+
+    perform_chunks = list(chunks(performances, 4))
+    print(len(perform_chunks))
+
     context = {
         CURRENT: current,
-        ALL_PERFORM: performances
+        ALL_PERFORM: perform_chunks
     }
 
     return render(request, 'works/home.html', context)
