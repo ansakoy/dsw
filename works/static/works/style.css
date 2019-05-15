@@ -26,8 +26,10 @@
 
 .carousel-control-prev {
     left: -10%;
+    top: -30%;
 }
 
 .carousel-control-next {
     right: -10%;
+    top: -30%;
 }

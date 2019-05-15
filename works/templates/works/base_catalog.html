@@ -30,8 +30,8 @@
 
                         <td>
                             <div class="container opus">
-                                <h2><a href="{% url 'works:opus' opus.pk %}" class="opus-title">{{ opus.title_ru }}</a></h2>
-                                <h3 class="opus_subtitle">{{ opus.subtitle_ru }}</h3>
+                                <h3><a href="{% url 'works:opus' opus.pk %}" class="opus-title">{{ opus.title_ru }}</a></h3>
+                                <h4 class="opus_subtitle">{{ opus.subtitle_ru }}</h4>
                                 <p class="opus_year">{{ opus.year }}</p>
                             </div>
                         </td>
@@ -54,9 +54,9 @@
 
 {% endblock %}
 
-{% block footer %}
+{% block page_list %}
 
-<div class="container footer">
+<div class="container pagination-footer">
     <div class="paginator-box">
         {% if works.paginator.num_pages > 1 %}
         <nav>
