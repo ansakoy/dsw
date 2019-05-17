@@ -1,0 +1,119 @@
+[
+  {
+    "model": "works.genre",
+    "pk": "111",
+    "fields": {
+      "name_ru": "Опера",
+      "name_hy": "Օպերա",
+      "name_en": "Opera"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "112",
+    "fields": {
+      "name_ru": "Опера-оратория",
+      "name_hy": "Օպերա-օրատորիա",
+      "name_en": "Opera-oratorio"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "113",
+    "fields": {
+      "name_ru": "Камерная опера",
+      "name_hy": "Կամերային օպերա",
+      "name_en": "Chamber opera"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "114",
+    "fields": {
+      "name_ru": "Балет",
+      "name_hy": "Բալետ",
+      "name_en": "Ballet"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "115",
+    "fields": {
+      "name_ru": "Симфония",
+      "name_hy": "Սիմֆոնիա",
+      "name_en": "Symphony"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "116",
+    "fields": {
+      "name_ru": "Камерная симфония",
+      "name_hy": "Կամերային սիմֆոնիա",
+      "name_en": "Chamber symphony"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "117",
+    "fields": {
+      "name_ru": "Концерт",
+      "name_hy": "Կոնցերտ",
+      "name_en": "Concerto"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "118",
+    "fields": {
+      "name_ru": "Камерные сочинения",
+      "name_hy": "կամերային երկեր",
+      "name_en": "Chamber works"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "119",
+    "fields": {
+      "name_ru": "Камерные кантаты",
+      "name_hy": "Կամերային կանտատ",
+      "name_en": "Chamber cantatas"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "120",
+    "fields": {
+      "name_ru": "Симфонические сочинения",
+      "name_hy": "Սիմֆոնիկ երկեր",
+      "name_en": "Orchestral works"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "121",
+    "fields": {
+      "name_ru": "Сонаты",
+      "name_hy": "Սոնատ",
+      "name_en": "Sonatas"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "122",
+    "fields": {
+      "name_ru": "Камерные сочинения",
+      "name_hy": "կամերային երկեր",
+      "name_en": "Chamber works"
+    }
+  },
+  {
+    "model": "works.genre",
+    "pk": "123",
+    "fields": {
+      "name_ru": "Романс",
+      "name_hy": "Ռոմանս",
+      "name_en": "Romance"
+    }
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "model": "works.person",
+    "pk": "11",
+    "fields": {
+      "fname_ru": "Александр",
+      "lname_ru": "Овсепян",
+      "fname_hy": "Ալեկսանդր",
+      "lname_hy": "Հովսեփյան",
+      "fname_en": "Alexander",
+      "lname_en": "Hovsepyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "12",
+    "fields": {
+      "fname_ru": "Давид",
+      "lname_ru": "Сакоян",
+      "fname_hy": "Դավիթ",
+      "lname_hy": "Սաքոյան",
+      "fname_en": "David",
+      "lname_en": "Sakoyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "13",
+    "fields": {
+      "fname_ru": "Седрак",
+      "lname_ru": "Ерканян",
+      "fname_hy": "Սեդրակ",
+      "lname_hy": "Երկանյան",
+      "fname_en": "Sedrak",
+      "lname_en": "Yerkanyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "14",
+    "fields": {
+      "fname_ru": "Максим",
+      "lname_ru": "Мартиросян",
+      "fname_hy": "Մաքսիմ",
+      "lname_hy": "Մարտիրոսյան",
+      "fname_en": "Maxim",
+      "lname_en": "Martirosyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "15",
+    "fields": {
+      "fname_ru": "Йохан Вольфганг",
+      "lname_ru": "Гёте",
+      "fname_hy": "Յոհան Վոլֆգանգ",
+      "lname_hy": "Գյոթե",
+      "fname_en": "Johann Wolfgang",
+      "lname_en": "Goethe"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "16",
+    "fields": {
+      "fname_ru": "Аветик",
+      "lname_ru": "Исаакян",
+      "fname_hy": "Ավետիք",
+      "lname_hy": "Իսահակյան",
+      "fname_en": "Avetik",
+      "lname_en": "Isahakyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "17",
+    "fields": {
+      "fname_ru": "Мисак",
+      "lname_ru": "Мецаренц",
+      "fname_hy": "Միսաք",
+      "lname_hy": "Մեծարենց",
+      "fname_en": "Misak",
+      "lname_en": "Metsarents"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "18",
+    "fields": {
+      "fname_ru": "Архиепископ Артак",
+      "lname_ru": "",
+      "fname_hy": "Արտակ Արքեպիսկոպոս",
+      "lname_hy": "",
+      "fname_en": "Archbishop Artak",
+      "lname_en": ""
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "19",
+    "fields": {
+      "fname_ru": "Анаит",
+      "lname_ru": "Латоян",
+      "fname_hy": "Անահիտ",
+      "lname_hy": "Լաթոյան",
+      "fname_en": "Anahit",
+      "lname_en": "Latoyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "20",
+    "fields": {
+      "fname_ru": "Лусине",
+      "lname_ru": "Маркосян",
+      "fname_hy": "Լուսինե",
+      "lname_hy": "Մարկոսյան",
+      "fname_en": "Lusine",
+      "lname_en": "Markosyan"
+    }
+  },
+  {
+    "model": "works.person",
+    "pk": "21",
+    "fields": {
+      "fname_ru": "Грета",
+      "lname_ru": "Антонян",
+      "fname_hy": "Գրետա",
+      "lname_hy": "Անտոնյան",
+      "fname_en": "Greta",
+      "lname_en": "Antonyan"
+    }
+  }
+]

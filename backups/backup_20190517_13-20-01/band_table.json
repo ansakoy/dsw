@@ -1,0 +1,28 @@
+[
+  {
+    "model": "works.band",
+    "pk": "11111",
+    "fields": {
+      "url": "https://www.facebook.com/Tagharan/",
+      "type_ru": "Ансамбль",
+      "name_ru": "Тагаран",
+      "type_hy": "Անսամբլ",
+      "name_hy": "Տաղարան",
+      "type_en": "Ensemble",
+      "name_en": "Tagharan"
+    }
+  },
+  {
+    "model": "works.band",
+    "pk": "11112",
+    "fields": {
+      "url": "http://ncoarmenia.am",
+      "type_ru": "",
+      "name_ru": "Государственный камерный оркестр Армении",
+      "type_hy": "",
+      "name_hy": "Հայաստանի ազգային կամերային նվագախումբ",
+      "type_en": "",
+      "name_en": "National Chamber Orchestra of Armenia"
+    }
+  }
+]

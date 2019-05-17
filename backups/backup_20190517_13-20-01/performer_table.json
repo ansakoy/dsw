@@ -1,0 +1,35 @@
+[
+  {
+    "model": "works.performer",
+    "pk": 1,
+    "fields": {
+      "performer": "20",
+      "role_ru": "Сопрано",
+      "role_hy": "Սոպրանո",
+      "role_en": "Soprano",
+      "performance": 1118
+    }
+  },
+  {
+    "model": "works.performer",
+    "pk": 2,
+    "fields": {
+      "performer": "13",
+      "role_ru": "Фортепиано",
+      "role_hy": "Դաշնամուր",
+      "role_en": "Piano",
+      "performance": 1118
+    }
+  },
+  {
+    "model": "works.performer",
+    "pk": 3,
+    "fields": {
+      "performer": "21",
+      "role_ru": "Сопрано",
+      "role_hy": "Սոպրանո",
+      "role_en": "Soprano",
+      "performance": 1119
+    }
+  }
+]

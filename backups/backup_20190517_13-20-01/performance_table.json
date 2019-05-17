@@ -1,0 +1,182 @@
+[
+  {
+    "model": "works.performance",
+    "pk": "1122",
+    "fields": {
+      "opus": "5",
+      "name_ru": null,
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "_TE-c12dGw4",
+      "audio_url": "608355465",
+      "perform_date": "2008-11-05",
+      "conductor": "13",
+      "band": "11111"
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1117",
+    "fields": {
+      "opus": "39",
+      "name_ru": null,
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "5lsyDfcca2E",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1116",
+    "fields": {
+      "opus": "2",
+      "name_ru": "Увертюра",
+      "name_hy": "Ուվերտյուրա",
+      "name_en": "Ouverture",
+      "video_url": "84Khom_Gx9Y",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1115",
+    "fields": {
+      "opus": "63",
+      "name_ru": "Часть II",
+      "name_hy": null,
+      "name_en": "Part 2",
+      "video_url": "pzPw6vDMdbM",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1114",
+    "fields": {
+      "opus": "63",
+      "name_ru": "Часть I",
+      "name_hy": null,
+      "name_en": "Part 1",
+      "video_url": "2FOVCYyO0Z8",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1112",
+    "fields": {
+      "opus": "2",
+      "name_ru": "Увертюра",
+      "name_hy": "Ուվերտյուրա",
+      "name_en": "Ouverture",
+      "video_url": "0dwuh5xALaM",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": "13",
+      "band": "11112"
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1123",
+    "fields": {
+      "opus": "10",
+      "name_ru": "Часть I",
+      "name_hy": null,
+      "name_en": "Part 1",
+      "video_url": "StNEPKYIEns",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1111",
+    "fields": {
+      "opus": "55",
+      "name_ru": "Фуга из первой части цикла",
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "anXJR_Zyvls",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": "13",
+      "band": "11112"
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1124",
+    "fields": {
+      "opus": "30",
+      "name_ru": null,
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "kktj_SorjCU",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": "13",
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1118",
+    "fields": {
+      "opus": "88",
+      "name_ru": null,
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "1fO89wwEtco",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1119",
+    "fields": {
+      "opus": "75",
+      "name_ru": "Журчащие речки",
+      "name_hy": "Խոխոջիւն գետակներ",
+      "name_en": "Murmuring Streams",
+      "video_url": "ctYHilyz_Xc",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": "13",
+      "band": "11111"
+    }
+  },
+  {
+    "model": "works.performance",
+    "pk": "1121",
+    "fields": {
+      "opus": "64",
+      "name_ru": null,
+      "name_hy": null,
+      "name_en": null,
+      "video_url": "WjNE3PZz-r8",
+      "audio_url": null,
+      "perform_date": null,
+      "conductor": null,
+      "band": null
+    }
+  }
+]

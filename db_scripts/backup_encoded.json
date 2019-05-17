@@ -1,0 +1,1912 @@
+[
+  {
+    "model": "works.opus",
+    "pk": "1",
+    "fields": {
+      "title_ru": "Кикос и Киракос",
+      "title_hy": "Կիկոս ու Կիրակոսը",
+      "title_en": "Kikos and Kirakos",
+      "subtitle_ru": "Детская опера",
+      "subtitle_hy": "Մանկական օպերա",
+      "subtitle_en": "An opera for children",
+      "comment_ru": "На основе народных песен",
+      "comment_hy": "Ժողովրդական երգերի հիման վրա",
+      "comment_en": "Based on folk songs",
+      "year": "1981",
+      "genre": 111,
+      "libretto_by": [
+        "11"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "2",
+    "fields": {
+      "title_ru": "Христос",
+      "title_hy": "Քրիստոս",
+      "title_en": "Christ",
+      "subtitle_ru": "Опера",
+      "subtitle_hy": "Օպերա",
+      "subtitle_en": "Opera",
+      "comment_ru": "Либретто на основе четырех Евангелий.",
+      "comment_hy": "Շորս Ավետարանների հիման վրա։",
+      "comment_en": "Libretto is based on the four Gospels",
+      "year": "1994",
+      "genre": 111,
+      "libretto_by": [
+        "12"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "3",
+    "fields": {
+      "title_ru": "Без заглавия",
+      "title_hy": "Անվերնագիր",
+      "title_en": "Unnamed",
+      "subtitle_ru": "Опера-оратория",
+      "subtitle_hy": "Օպերա-օրատորիա",
+      "subtitle_en": "Opera-oratorio",
+      "comment_ru": "Либретто по пьесе Александра Овсепяна",
+      "comment_hy": "Լիբրետոն ըստ Ալեկսանդր Հովսեփյանի թափերգության",
+      "comment_en": "Libretto is based on a play by Alexander Hovsepyan",
+      "year": "1996",
+      "genre": 111,
+      "libretto_by": [
+        "12"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "4",
+    "fields": {
+      "title_ru": "Рипсимэ",
+      "title_hy": "Հռիփսիմէ",
+      "title_en": "Hripsime",
+      "subtitle_ru": "Опера",
+      "subtitle_hy": "Օպերա",
+      "subtitle_en": "Opera",
+      "comment_ru": "Либретто по Агафангелу",
+      "comment_hy": "Լիբրետոն ըստ Ագաթանգեղոսի",
+      "comment_en": "Libretto is based on Agathangelos",
+      "year": "1997",
+      "genre": 111,
+      "libretto_by": [
+        "12"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "5",
+    "fields": {
+      "title_ru": "Житие дураков",
+      "title_hy": "Վարք հիմարաց",
+      "title_en": "Life of Fools",
+      "subtitle_ru": "Камерная опера",
+      "subtitle_hy": "Կամերային օպերա",
+      "subtitle_en": "Chamber opera",
+      "comment_ru": "Либретто по сказкам Ованнеса Туманяна",
+      "comment_hy": "Լիբրետոն ըստ Հովհաննես Թումանյանի հեքիաթների",
+      "comment_en": "Libretto is based on tales by Hovhannes Tumanyan",
+      "year": "2008",
+      "genre": 111,
+      "libretto_by": [
+        "13"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "6",
+    "fields": {
+      "title_ru": "У весельчака веселья не убудет",
+      "title_hy": "Քեֆ անողին քեֆ չի պակսիլ",
+      "title_en": "A Merry Fellow won't Lose His Merriment",
+      "subtitle_ru": "Камерная опера",
+      "subtitle_hy": "Կամերային օպերա",
+      "subtitle_en": "Chamber opera",
+      "comment_ru": "Либретто по сказке Ованнеса Туманяна",
+      "comment_hy": "Լիբրետոն ըստ Հովհաննես Թումանյանի հեքիաթի",
+      "comment_en": "Libretto is based on a tale by Hovhannes Tumanyan",
+      "year": "2012",
+      "genre": 111,
+      "libretto_by": [
+        "13"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "7",
+    "fields": {
+      "title_ru": "Рипсимэ",
+      "title_hy": "Հռիփսիմէ",
+      "title_en": "",
+      "subtitle_ru": "Балет",
+      "subtitle_hy": "Բալետ",
+      "subtitle_en": "Ballet",
+      "comment_ru": "Либретто по Агафангелу",
+      "comment_hy": "Լիբրետոն ըստ Ագաթանգեղոսի",
+      "comment_en": "",
+      "year": "1999",
+      "genre": 114,
+      "libretto_by": [
+        "14",
+        "12"
+      ],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "8",
+    "fields": {
+      "title_ru": "Мудрые танцы",
+      "title_hy": "Իմաստուն պարեր",
+      "title_en": "Wise Dances",
+      "subtitle_ru": "Балет",
+      "subtitle_hy": "Բալետ",
+      "subtitle_en": "Ballet",
+      "comment_ru": "Без либретто",
+      "comment_hy": "Ան լիբրետո",
+      "comment_en": "Without libretto",
+      "year": "2013",
+      "genre": 114,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "9",
+    "fields": {
+      "title_ru": "Симфония №1",
+      "title_hy": "Սիմֆոնիա №1",
+      "title_en": "Symphony No. 1",
+      "subtitle_ru": "Симфонический оркестр, солисты и хор",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ, մեչերգիչներ և երգչախումբ",
+      "subtitle_en": "Symphony orchestra, soloists, choir",
+      "comment_ru": "На основе 32-го псалма (в русской версии Псалтири - 31-го псалма)",
+      "comment_hy": "№32 Սաղմոսի հիման վրա",
+      "comment_en": "Based on Psalm 32",
+      "year": "1997",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "10",
+    "fields": {
+      "title_ru": "Симфония №2",
+      "title_hy": "Սիմֆոնիա №2",
+      "title_en": "Symphony No. 2",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2001",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "11",
+    "fields": {
+      "title_ru": "Симфония №3",
+      "title_hy": "Սիմֆոնիա №3",
+      "title_en": "Symphony No. 3",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2004",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "12",
+    "fields": {
+      "title_ru": "Симфония №4 «Гимн Всевышнему»",
+      "title_hy": "Սիմֆոնիա №4 “Օրհներգ Բարձրյալին”",
+      "title_en": "Symphony No. 4 \"Hymn to the Highest\"",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2005",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "13",
+    "fields": {
+      "title_ru": "Симфония №5",
+      "title_hy": "Սիմֆոնիա №5",
+      "title_en": "Symphony No. 5",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "14",
+    "fields": {
+      "title_ru": "Симфония №6 «Распятие»",
+      "title_hy": "Սիմֆոնիա №6 “Խաչելություն”",
+      "title_en": "Symphony No. 6 \"Crucifixion\"",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2009",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "15",
+    "fields": {
+      "title_ru": "Симфония №7",
+      "title_hy": "Սիմֆոնիա №7",
+      "title_en": "Symphony No. 7",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2010",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "16",
+    "fields": {
+      "title_ru": "Симфония №8",
+      "title_hy": "Սիմֆոնիա №8",
+      "title_en": "Symphony No. 8",
+      "subtitle_ru": "Симфонический оркестр и солист баритон",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ և մեներգիչ բարիտոն",
+      "subtitle_en": "Symphony orchestra and baritone soloist",
+      "comment_ru": "Слова Й.В. Гёте (в пер. О. Туманяна)",
+      "comment_hy": "Խոսք Գյոթեյի, թարգմանությունբ Հովհ. Թումանյանի",
+      "comment_en": "Lyrics by Johann Wolfgang Goethe, Hovhannes Tumanyan (trans.)",
+      "year": "2011",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": [
+        "15"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "17",
+    "fields": {
+      "title_ru": "Симфония №9",
+      "title_hy": "Սիմֆոնիա №9",
+      "title_en": "Symphony No. 9",
+      "subtitle_ru": "Симфонический оркестр, хор",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ, երգչախումբ",
+      "subtitle_en": "Symphony orchestra, choir",
+      "comment_ru": "Слова из армянской литургии",
+      "comment_hy": "Խոսքը՝ հայոց Պատարագից",
+      "comment_en": "Text from Armenian Liturgy",
+      "year": "2013",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "18",
+    "fields": {
+      "title_ru": "Симфония №10 «Детская»",
+      "title_hy": "Սիմֆոնիա №10։ Մանկական",
+      "title_en": "Symphony No. 10 \"Children's\"",
+      "subtitle_ru": "Симфонический оркестр",
+      "subtitle_hy": "Սիմֆոնիկ նվագախումբ",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2016",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "19",
+    "fields": {
+      "title_ru": "Камерная симфония №1",
+      "title_hy": "Կամերային սիմֆոնիա №1",
+      "title_en": "Chamber symphony No. 1",
+      "subtitle_ru": "Камерный оркестр",
+      "subtitle_hy": "Կամերային նվագախումբ",
+      "subtitle_en": "Chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1990",
+      "genre": 116,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "20",
+    "fields": {
+      "title_ru": "Камерная симфония №2",
+      "title_hy": "Կամերային սիմֆոնիա №2",
+      "title_en": "Chamber symphony No. 2",
+      "subtitle_ru": "Камерный оркестр",
+      "subtitle_hy": "Կամերային նվագախումբ",
+      "subtitle_en": "Chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2005",
+      "genre": 116,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "21",
+    "fields": {
+      "title_ru": "Камерная симфония №3",
+      "title_hy": "Կամերային սիմֆոնիա №3",
+      "title_en": "Chamber symphony No. 3",
+      "subtitle_ru": "Камерный оркестр",
+      "subtitle_hy": "Կամերային նվագախումբ",
+      "subtitle_en": "Chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 116,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "22",
+    "fields": {
+      "title_ru": "Концерт №1",
+      "title_hy": "Կոնցերտ №1",
+      "title_en": "Concerto No. 1",
+      "subtitle_ru": "для фортепиано и камерного оркестра",
+      "subtitle_hy": "դաշնամտրի և կամերային նվագախմբի համար",
+      "subtitle_en": "for piano and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1985",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "23",
+    "fields": {
+      "title_ru": "Концерт №2",
+      "title_hy": "Կոնցերտ №2",
+      "title_en": "Concerto No. 2",
+      "subtitle_ru": "для фортепиано и струнного оркестра",
+      "subtitle_hy": "դաշնամտրի և լարային նվագախմբի համար",
+      "subtitle_en": "for piano and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1990",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "24",
+    "fields": {
+      "title_ru": "Концерт №3",
+      "title_hy": "Կոնցերտ №3",
+      "title_en": "Concerto No. 3",
+      "subtitle_ru": "для фортепиано и камерного оркестра",
+      "subtitle_hy": "դաշնամտրի և կամերային նվագախմբի համար",
+      "subtitle_en": "for piano and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1991",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "25",
+    "fields": {
+      "title_ru": "Концерт №4",
+      "title_hy": "Կոնցերտ №4",
+      "title_en": "Concerto No. 4",
+      "subtitle_ru": "для фортепиано и симфонического оркестра",
+      "subtitle_hy": "դաշնամտրի և սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for piano and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1993",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "26",
+    "fields": {
+      "title_ru": "Концерт №1",
+      "title_hy": "Կոնցերտ №1",
+      "title_en": "Concerto No. 1",
+      "subtitle_ru": "для скрипки и камерного оркестра",
+      "subtitle_hy": "ջութակի և կամերային նվագախմբի համար",
+      "subtitle_en": "for violin and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1994",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "27",
+    "fields": {
+      "title_ru": "Концерт №2",
+      "title_hy": "Կոնցերտ №2",
+      "title_en": "Concerto No. 2",
+      "subtitle_ru": "для скрипки и симфонического оркестра",
+      "subtitle_hy": "ջութակի և սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for violin and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2002",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "28",
+    "fields": {
+      "title_ru": "Концерт №3",
+      "title_hy": "Կոնցերտ №3",
+      "title_en": "Concerto No. 3",
+      "subtitle_ru": "для скрипки и камерного оркестра",
+      "subtitle_hy": "ջութակի և կամերային նվագախմբի համար",
+      "subtitle_en": "for violin and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2017",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "29",
+    "fields": {
+      "title_ru": "Концерт",
+      "title_hy": "Կոնցերտ",
+      "title_en": "Concerto",
+      "subtitle_ru": "для виолончели и камерного оркестра",
+      "subtitle_hy": "թավջութակի և կամերային նվագախմբի համար",
+      "subtitle_en": "for cello and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1995",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "30",
+    "fields": {
+      "title_ru": "Концерт №1",
+      "title_hy": "Կոնցերտ №1",
+      "title_en": "Concerto No. 1",
+      "subtitle_ru": "для органа и камерного оркестра",
+      "subtitle_hy": "երգեհոնի և կամերային նվագախմբի համար",
+      "subtitle_en": "for pipe organ and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2016",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "31",
+    "fields": {
+      "title_ru": "Концерт №2",
+      "title_hy": "Կոնցերտ №2",
+      "title_en": "Concerto No. 2",
+      "subtitle_ru": "для органа и камерного оркестра",
+      "subtitle_hy": "երգեհոնի և կամերային նվագախումբի համար",
+      "subtitle_en": "for pipe organ and chamber orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2017",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "32",
+    "fields": {
+      "title_ru": "Концерт",
+      "title_hy": "Կոնցերտ",
+      "title_en": "Concerto",
+      "subtitle_ru": "для восьми инструментов",
+      "subtitle_hy": "ութ գործիքի համար",
+      "subtitle_en": "for eight instruments",
+      "comment_ru": "Флейта, гобой, кларнет, фагот, валторна, клавесин, скрипка, виолончель",
+      "comment_hy": "ֆլեյտա, հոբոյ, կլարնետ, ֆագոտ, գալարափող, կլավեսին, ջութակ, թավջութակ",
+      "comment_en": "Flute, oboe, clarinet, bassoon, French horn, harpsichord, violin, cello",
+      "year": "1995",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "33",
+    "fields": {
+      "title_ru": "Концерт",
+      "title_hy": "Կոնցերտ",
+      "title_en": "Concerto",
+      "subtitle_ru": "для струнного оркестра",
+      "subtitle_hy": "լարային նվագախումբի համար",
+      "subtitle_en": "for string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2002",
+      "genre": 117,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "34",
+    "fields": {
+      "title_ru": "Реквием",
+      "title_hy": "Ռեքվիեմ",
+      "title_en": "Requiem",
+      "subtitle_ru": "для женского хора, солистки сопрано и камерного оркестра",
+      "subtitle_hy": "կանանց երգչախմբի, մեներգչուհի սոպրանոյի և կամերային նվագախումբի համար",
+      "subtitle_en": "for Female Choir, Soprano Soloist, and Chamber Orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1990",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": [
+        "16"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "35",
+    "fields": {
+      "title_ru": "Шутка",
+      "title_hy": "Կատակ",
+      "title_en": "Scherzo",
+      "subtitle_ru": "для женского хора и камерного оркестра",
+      "subtitle_hy": "կանանց երգչախումբի և կամերային նվագախումբի համար",
+      "subtitle_en": "for female choir and chamber orchestra",
+      "comment_ru": "Без слов",
+      "comment_hy": "Ան խոսք",
+      "comment_en": "No lyrics",
+      "year": "1990",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "36",
+    "fields": {
+      "title_ru": "Камерная кантата №1 «Из глубин сердца»",
+      "title_hy": "Կամերային կանտատ №1 «Ի խորոց սրտի»",
+      "title_en": "Chamber Cantata No. 1 \"From the Depths of the Heart\"",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "",
+      "comment_ru": "По «Книге скорбных песнопений» Григора Нарекаци",
+      "comment_hy": "ըստ Գր. Նարեկացու «Մատյան Ողբերգություն»",
+      "comment_en": "Based on The Book of Lamentations by Gregory of Narek",
+      "year": "1995",
+      "genre": 119,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "37",
+    "fields": {
+      "title_ru": "Камерная кантата №2 «Аллилуйя»",
+      "title_hy": "Կամերային կանտատ №2 «Ալելույա»",
+      "title_en": "Chamber Cantata \"Hallelujah\"",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "",
+      "comment_ru": "На слова из армянской Литургии",
+      "comment_hy": "հայկական Պատարագի խոսքերով",
+      "comment_en": "Based on the text of Armenian Liturgy",
+      "year": "1996",
+      "genre": 119,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "38",
+    "fields": {
+      "title_ru": "Камерная кантата №3",
+      "title_hy": "Կամերային կանտատ №3",
+      "title_en": "Chamber Cantata No. 3",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1998",
+      "genre": 119,
+      "libretto_by": [],
+      "lyrics_by": [
+        "17"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "39",
+    "fields": {
+      "title_ru": "Високосный год",
+      "title_hy": "Նահանջ տարի",
+      "title_en": "The Leap Year",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1990",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "40",
+    "fields": {
+      "title_ru": "Элегия",
+      "title_hy": "Եղերերգ",
+      "title_en": "Elegy",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1996",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "41",
+    "fields": {
+      "title_ru": "Adagio",
+      "title_hy": "Adagio",
+      "title_en": "Adagio",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2000",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "42",
+    "fields": {
+      "title_ru": "Presto",
+      "title_hy": "Presto",
+      "title_en": "Presto",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2000",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "43",
+    "fields": {
+      "title_ru": "Прелюдия и фуга",
+      "title_hy": "Պրելյուդ և ֆուգա",
+      "title_en": "Prelude and Fugue",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2000",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "44",
+    "fields": {
+      "title_ru": "Пассакалья и фуга",
+      "title_hy": "Պասսակալիա և ֆուգա",
+      "title_en": "Passacaglia and Fugue",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2006",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "45",
+    "fields": {
+      "title_ru": "Псалом",
+      "title_hy": "Սաղմոս",
+      "title_en": "Psalm",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2011",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "46",
+    "fields": {
+      "title_ru": "Пассакалья",
+      "title_hy": "Պասսակալիա",
+      "title_en": "Passacaglia",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2012",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "47",
+    "fields": {
+      "title_ru": "Чакона",
+      "title_hy": "Չակոնա",
+      "title_en": "Chaconne",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2015",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "48",
+    "fields": {
+      "title_ru": "Псалом",
+      "title_hy": "Սաղմոս",
+      "title_en": "Psalm",
+      "subtitle_ru": "для хора и симфонического оркестра",
+      "subtitle_hy": "երգչախմբի և սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "По 23 псалму Давида. Номер псалма указан в соответствии с армянской нумерацией псалмов. В Септуагинте (и русскоязычной версии Псалтири) ему соответствует 22 псалом.",
+      "comment_hy": "ըստ Դավթի №23 սաղմոսի",
+      "comment_en": "Psalm 23 of David",
+      "year": "2015",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "49",
+    "fields": {
+      "title_ru": "Пассакалья и фуга №2",
+      "title_hy": "Պասսակալիա և ֆուգա №2",
+      "title_en": "Passacaglia and Fugue No.2",
+      "subtitle_ru": "для симфонического оркестра",
+      "subtitle_hy": "սիմֆոնիկ նվագախմբի համար",
+      "subtitle_en": "for symphony orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2017",
+      "genre": 120,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "50",
+    "fields": {
+      "title_ru": "Элегия",
+      "title_hy": "Եղերերգ",
+      "title_en": "Elegy",
+      "subtitle_ru": "для флейты (или скрипки) и струнного оркестра",
+      "subtitle_hy": "ֆլեյտայի (կամ ջութակի) և լարային նվագախմբի համար",
+      "subtitle_en": "for flute (or violine) and string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1996",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "51",
+    "fields": {
+      "title_ru": "Многоточие",
+      "title_hy": "Բացմակետ",
+      "title_en": "Ellipsis",
+      "subtitle_ru": "для струнного оркестра",
+      "subtitle_hy": "լարային նվագախմբի համար",
+      "subtitle_en": "for string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2005",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "52",
+    "fields": {
+      "title_ru": "Грешен",
+      "title_hy": "Մեղա",
+      "title_en": "Peccavi",
+      "subtitle_ru": "для струнного оркестра",
+      "subtitle_hy": "լարային նվագախմբի համար",
+      "subtitle_en": "for string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2006",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "53",
+    "fields": {
+      "title_ru": "Largo",
+      "title_hy": "Largo",
+      "title_en": "Largo",
+      "subtitle_ru": "для виолончели и струнного оркестра",
+      "subtitle_hy": "թավջութակի և լարային նվագախմբի համար",
+      "subtitle_en": "for cello and string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "54",
+    "fields": {
+      "title_ru": "Тихая молитва к Богоматери",
+      "title_hy": "Մեղմ աղոթք Տիրամորը",
+      "title_en": "Quiet Prayer to Mother of God",
+      "subtitle_ru": "для струнного оркестра",
+      "subtitle_hy": "լարային նվագախմբի համար",
+      "subtitle_en": "for string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "55",
+    "fields": {
+      "title_ru": "Пять духовных прелюдий и фуг",
+      "title_hy": "Հինգ հոգևոր պրելյուդ և ֆուգա",
+      "title_en": "Five spiritual Preludes and Fugues",
+      "subtitle_ru": "для струнного оркестра",
+      "subtitle_hy": "լարային նվագախմբի համար",
+      "subtitle_en": "for string orchestra",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2008",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "56",
+    "fields": {
+      "title_ru": "Квинтет",
+      "title_hy": "Կվինտետ",
+      "title_en": "Quintet",
+      "subtitle_ru": "для флейты, кларнета, скрипки, виолончели и фортепиано",
+      "subtitle_hy": " ֆլեյտայի, կլարնետի, ջութակի, թավջութակի և դաշնամուրի համար",
+      "subtitle_en": "for flute, clarinet, violin, cello, and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2004",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "71",
+    "fields": {
+      "title_ru": "Эта странная музыка A.D.Es",
+      "title_hy": "Այս , տարօրինակ A. D. Es. երաժշտությունը",
+      "title_en": "This Strange Music A.D.Es",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": null,
+      "comment_hy": null,
+      "comment_en": null,
+      "year": "2011",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "57",
+    "fields": {
+      "title_ru": "Струнный квартет №1",
+      "title_hy": "Լարային կվարտետ №1",
+      "title_en": "String Quartet No.1",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1993",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "58",
+    "fields": {
+      "title_ru": "Струнный квартет №2",
+      "title_hy": "Լարային կվարտետ №2",
+      "title_en": "String Quartet No.2",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1997",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "59",
+    "fields": {
+      "title_ru": "Трио",
+      "title_hy": "Տրիո",
+      "title_en": "Trio",
+      "subtitle_ru": "для двух виолончелей и фортепиано",
+      "subtitle_hy": "երկու թավջութակի և դաշնամուրի համար",
+      "subtitle_en": "for two cellos and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1999",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "60",
+    "fields": {
+      "title_ru": "Трио",
+      "title_hy": "Տրիո",
+      "title_en": "Trio",
+      "subtitle_ru": "для скрипки, виолончели и фортепиано",
+      "subtitle_hy": "ջութակի, թավջութակի և դաշնամուրի համար",
+      "subtitle_en": "for violin, cello, and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2006",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "61",
+    "fields": {
+      "title_ru": "Соната",
+      "title_hy": "Սոնատ",
+      "title_en": "Sonata",
+      "subtitle_ru": "для флейты и фортепиано",
+      "subtitle_hy": "ֆլեյտայի և դաշնամուրի համար",
+      "subtitle_en": "for flute and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2010",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "62",
+    "fields": {
+      "title_ru": "Соната",
+      "title_hy": "Սոնատ",
+      "title_en": "Sonata",
+      "subtitle_ru": "для скрипки и фортепиано",
+      "subtitle_hy": "ջութակի և դաշնամուրի համար",
+      "subtitle_en": "for violin and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2005",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "63",
+    "fields": {
+      "title_ru": "Соната",
+      "title_hy": "Սոնատ",
+      "title_en": "Sonata",
+      "subtitle_ru": "для виолончели и фортепиано",
+      "subtitle_hy": "թավջութակի և դաշնամուրի համար",
+      "subtitle_en": "for cello and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2006",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "64",
+    "fields": {
+      "title_ru": "Соната №1",
+      "title_hy": "Սոնատ №1",
+      "title_en": "Sonata No.1",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1992",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "65",
+    "fields": {
+      "title_ru": "Соната №2",
+      "title_hy": "Սոնատ №2",
+      "title_en": "Sonata No.2",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "66",
+    "fields": {
+      "title_ru": "Малая соната",
+      "title_hy": "Փոքր սոնատ",
+      "title_en": "Small Sonata",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1999",
+      "genre": 121,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "67",
+    "fields": {
+      "title_ru": "Вокализ №1",
+      "title_hy": "Վոկալիզ №1",
+      "title_en": "Vocalise N1",
+      "subtitle_ru": "для сопрано и инструментального ансамбля",
+      "subtitle_hy": "սոպրանոյի և գործիքային համույթի համար",
+      "subtitle_en": "for soprano and instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2001",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "68",
+    "fields": {
+      "title_ru": "Andante",
+      "title_hy": "Andante",
+      "title_en": "Andante",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2002",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "69",
+    "fields": {
+      "title_ru": "Колыбельная с гимном",
+      "title_hy": "Օրոր և օրհներգ",
+      "title_en": "Lullaby with hymn",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2002",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "70",
+    "fields": {
+      "title_ru": "Mysticos",
+      "title_hy": "Mysticos",
+      "title_en": "Mysticos",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2009",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "72",
+    "fields": {
+      "title_ru": "К Алле",
+      "title_hy": "Ալլային",
+      "title_en": "For Alla",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2014",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "73",
+    "fields": {
+      "title_ru": "Воплощение",
+      "title_hy": "Մարմնացուն",
+      "title_en": "The Incarnation",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2015",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "74",
+    "fields": {
+      "title_ru": "Молитва Богородице для Мариамик",
+      "title_hy": "Աղոթք Տիրամորը Մարիամիկ համար",
+      "title_en": "Prayer to Mother of God for Mariamik",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2016",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "75",
+    "fields": {
+      "title_ru": "Семь китайских мелодий",
+      "title_hy": "Չինական յոթ մեղեդի",
+      "title_en": "Seven Chinese Melodies",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1994",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "76",
+    "fields": {
+      "title_ru": "Две армянские мелодии",
+      "title_hy": "Հայկական երկու մեղեդի",
+      "title_en": "Two Armenian Melodies",
+      "subtitle_ru": "для сантура соло и инструментального ансамбля",
+      "subtitle_hy": "մենանվագ սանթո ւրի և գործիքային համույթի համար",
+      "subtitle_en": "for solo santur and instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2011",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "77",
+    "fields": {
+      "title_ru": "Четыре армянские народные песни",
+      "title_hy": "Հայկական ժողովրդական չորս երգ",
+      "title_en": "Four Armenian Folk Melodies",
+      "subtitle_ru": "для сопрано и инструментального ансамбля",
+      "subtitle_hy": "սոպրանոյի և գործիքային համույթի համար",
+      "subtitle_en": "for soprano and instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2006",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "78",
+    "fields": {
+      "title_ru": "Обработка фортепианной пьесы Э. Мирзояна \"Грустный вальс\"",
+      "title_hy": "Էղ. Միրզոյանի «Տխուր վալս» դաշնամուրային պիեսի մշակում",
+      "title_en": "Arrangement of the piano piece by Edvard Mirzoyan \"Sad Waltz\"",
+      "subtitle_ru": "для инструментального ансамбля",
+      "subtitle_hy": "գործիքային համույթի համար",
+      "subtitle_en": "for instrumental ensemble",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2008",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "79",
+    "fields": {
+      "title_ru": "Трагическая фуга",
+      "title_hy": "Ողբերգական ֆուգա",
+      "title_en": "Tragic Fugue",
+      "subtitle_ru": "для органа",
+      "subtitle_hy": "երգեհոնի համար",
+      "subtitle_en": "for pipe organ",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2003",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "80",
+    "fields": {
+      "title_ru": "Прелюдия и фуга",
+      "title_hy": "Պրելյուդ և ֆուգա",
+      "title_en": "Prelude and Fugue",
+      "subtitle_ru": "для органа",
+      "subtitle_hy": "երգեհոնի համար",
+      "subtitle_en": "for pipe organ",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2015",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "81",
+    "fields": {
+      "title_ru": "Две прелюдии и фуги",
+      "title_hy": "Երկու պրելյուդ և ֆուգա",
+      "title_en": "Two preludes and Fugues",
+      "subtitle_ru": "для виолончели и фортепиано",
+      "subtitle_hy": "թավջութակի և դաշնամուրի համար",
+      "subtitle_en": "for cello and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2012",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "82",
+    "fields": {
+      "title_ru": "Восемь молитв",
+      "title_hy": "Ութ աղոթք",
+      "title_en": "Eight Prayers",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2009",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "83",
+    "fields": {
+      "title_ru": "Грустные мелодии многогрешного",
+      "title_hy": "Բազմամեղի տխուր մեղեդիները",
+      "title_en": "Sad Melodies by the one of Many Sins",
+      "subtitle_ru": "Десять пьес для фортепиано",
+      "subtitle_hy": "տասը պիես դաշնամուրի համար",
+      "subtitle_en": "ten pieces for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2009",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "84",
+    "fields": {
+      "title_ru": "Простая музыка",
+      "title_hy": "Պարզ երաժշտություն",
+      "title_en": "Simple Music",
+      "subtitle_ru": "Десять пьес для фортепиано",
+      "subtitle_hy": "տասը պիես դաշնամուրի համար",
+      "subtitle_en": "ten pieces for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2011",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "85",
+    "fields": {
+      "title_ru": "Три этюда",
+      "title_hy": "Երեք էտյուդ",
+      "title_en": "Three études",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2011",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "86",
+    "fields": {
+      "title_ru": "Токката",
+      "title_hy": "Տոկատ",
+      "title_en": "Toccata",
+      "subtitle_ru": "для фортепиано",
+      "subtitle_hy": "դաշնամուրի համար",
+      "subtitle_en": "for piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1996",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "87",
+    "fields": {
+      "title_ru": "Два романса",
+      "title_hy": "Երկու ռոմանս",
+      "title_en": "Two Romances",
+      "subtitle_ru": "для сопрано и фортепиано",
+      "subtitle_hy": "սոպրանոյի և դաշնամուրի համար",
+      "subtitle_en": "for soprano and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "1997",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": [
+        "18"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "88",
+    "fields": {
+      "title_ru": "Тишина взглядов твоих",
+      "title_hy": "Լռութիւնը նայուածք ներուդ",
+      "title_en": "Quietness of your gaze",
+      "subtitle_ru": "романс для сопрано и фортепиано",
+      "subtitle_hy": "ռոմանս սոպրանոյի և դաշնամուրի համար",
+      "subtitle_en": "romance for soprano and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "Romance for soprano and piano",
+      "year": "1997",
+      "genre": 123,
+      "libretto_by": [],
+      "lyrics_by": [
+        "13"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "89",
+    "fields": {
+      "title_ru": "Псалом",
+      "title_hy": "Սղմոս",
+      "title_en": "Psalm",
+      "subtitle_ru": "для меццо-сопрано и фортепиано",
+      "subtitle_hy": "մեձո-սոպրանոյի և դաշնամուրի համար",
+      "subtitle_en": "for mezzo-soprano and piano",
+      "comment_ru": "По 23 псалму Давида. Номер псалма указан в соответствии с армянской нумерацией псалмов. В Септуагинте (и русскоязычной версии Псалтири) ему соответствует 22 псалом.",
+      "comment_hy": "ըստ Դավթի №23 սաղմոսի",
+      "comment_en": "Based on Psalm 23 of David",
+      "year": "1997",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "90",
+    "fields": {
+      "title_ru": "Две песни",
+      "title_hy": "Երկու երգ",
+      "title_en": "Two songs",
+      "subtitle_ru": "для сопрано и фортепиано",
+      "subtitle_hy": "սոպրանոյի և դաշնամուրի համար",
+      "subtitle_en": "for soprano and piano",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2005",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": [
+        "19"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "91",
+    "fields": {
+      "title_ru": "Вокализ",
+      "title_hy": "Վոկալիզ",
+      "title_en": "Vocalise",
+      "subtitle_ru": "для баса и фортепиано",
+      "subtitle_hy": "բասի և դաշնամուրի համար",
+      "subtitle_en": "for bass and piano",
+      "comment_ru": "",
+      "comment_hy": "բասի և դաշնամուրի համար",
+      "comment_en": "",
+      "year": "2007",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "92",
+    "fields": {
+      "title_ru": "Роза",
+      "title_hy": "Վարդը",
+      "title_en": "Rose",
+      "subtitle_ru": "Романс для баритона и фортепиано",
+      "subtitle_hy": "ռոմանս բարիտոնի և դաշնամուրի համար",
+      "subtitle_en": "for baritone and piano",
+      "comment_ru": "Слова Й.В. Гёте (в пер. О. Туманяна)",
+      "comment_hy": "Խոսք Գյոթեյի Հովհ. Թումանյանի թարգմանությունը",
+      "comment_en": "Lyrics by Johann Wolfgang Goethe, Hovhannes Tumanyan (trans.)",
+      "year": "2010",
+      "genre": 123,
+      "libretto_by": [],
+      "lyrics_by": [
+        "15"
+      ]
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "93",
+    "fields": {
+      "title_ru": "Псалом",
+      "title_hy": "Սաղմոս",
+      "title_en": "Psalm",
+      "subtitle_ru": "для меццо-сопрано и фортепиано",
+      "subtitle_hy": "մեձո-սոպրանոյի և դաշնամուրի համար",
+      "subtitle_en": "for mezzo-soprano and piano",
+      "comment_ru": "По псалму №13 Давида (в варианте Септуагинты - псалом №12)",
+      "comment_hy": "ըստ Դավթի №13 սաղմոսի",
+      "comment_en": "Based on Psalm 13 of David",
+      "year": "2001",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "94",
+    "fields": {
+      "title_ru": "Элегия",
+      "title_hy": "Եղերերգ",
+      "title_en": "Elegy",
+      "subtitle_ru": "для детского хора",
+      "subtitle_hy": "մանկական երգչախմբի համար",
+      "subtitle_en": "for children's choir",
+      "comment_ru": "Без слов",
+      "comment_hy": "Ան խոսք",
+      "comment_en": "No lyrics",
+      "year": "2000",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "95",
+    "fields": {
+      "title_ru": "Токката",
+      "title_hy": "Տոկատ",
+      "title_en": "Toccata",
+      "subtitle_ru": "для детского хора",
+      "subtitle_hy": "մանկական երգչախմբի համար",
+      "subtitle_en": "for children's choir",
+      "comment_ru": "Без слов",
+      "comment_hy": "Ան խոսք",
+      "comment_en": "No lyrics",
+      "year": "2008",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "96",
+    "fields": {
+      "title_ru": "Отче наш",
+      "title_hy": "Հայր մեր",
+      "title_en": "Pater Noster",
+      "subtitle_ru": "для смешанного хора",
+      "subtitle_hy": "խառը երգչախմբի համար",
+      "subtitle_en": "for mixed choir",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "for mixed choir",
+      "year": "2008",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "97",
+    "fields": {
+      "title_ru": "Токката",
+      "title_hy": "Տոկատ",
+      "title_en": "Toccata",
+      "subtitle_ru": "для смешанного хора",
+      "subtitle_hy": "խառը երգչախմբի համար",
+      "subtitle_en": "for mixed choir",
+      "comment_ru": "Без слов",
+      "comment_hy": "Ան խոսք",
+      "comment_en": "No lyrics",
+      "year": "2009",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "98",
+    "fields": {
+      "title_ru": "Трио",
+      "title_hy": "Տրիո",
+      "title_en": "Trio",
+      "subtitle_ru": "для двух фортепиано и виолончели",
+      "subtitle_hy": "երկու դաշնամուրի և թավջութակի համար",
+      "subtitle_en": "for two pianos and cello",
+      "comment_ru": "",
+      "comment_hy": "",
+      "comment_en": "",
+      "year": "2018",
+      "genre": 118,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  },
+  {
+    "model": "works.opus",
+    "pk": "99",
+    "fields": {
+      "title_ru": "Симфония №11 «Воскресение»",
+      "title_hy": "Սիմֆոնիա №11 \"Հարություն\"",
+      "title_en": "Symphony No. 11 Resurrection",
+      "subtitle_ru": "",
+      "subtitle_hy": "",
+      "subtitle_en": "Symphony orchestra",
+      "comment_ru": "Симфонический оркестр",
+      "comment_hy": "Սիմֆոնիկ նվագախումբ",
+      "comment_en": "",
+      "year": "2018",
+      "genre": 115,
+      "libretto_by": [],
+      "lyrics_by": []
+    }
+  }
+]
