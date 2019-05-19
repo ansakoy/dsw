@@ -1,5 +1,13 @@
 from django.contrib import admin
-from .models import Opus, Person, Genre, Band, Performance, Performer
+from .models import (Opus,
+                     Person,
+                     Genre,
+                     Band,
+                     Performance,
+                     Performer,
+                     About,
+                     Home,
+                     Bio)
 
 
 class LyricsInline(admin.TabularInline):
@@ -131,9 +139,51 @@ class PerformanceAdmin(admin.ModelAdmin):
     ]
 
 
+# Админка для "статических" страниц сайта
+
+class AboutAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Meta', {
+            'fields': ['language', 'section_code']
+        }),
+        ('Content', {
+            'fields': ['section_name', 'text',]
+        }),
+    ]
+    list_display = ('language', 'section_code',)
+    list_filter = ('language', 'section_code')
+
+
+class BioAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Meta', {
+            'fields': ['language',]
+        }),
+        ('Content', {
+            'fields': ['page_title', 'text',]
+        }),
+    ]
+    list_display = ('language',)
+
+
+class HomeAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Meta', {
+            'fields': ['language',]
+        }),
+        ('Content', {
+            'fields': ['page_title', 'text',]
+        }),
+    ]
+    list_display = ('language',)
+
+
 admin.site.register(Opus, OpusAdmin)
 admin.site.register(Person, PersonAdmin)
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Band, BandAdmin)
 admin.site.register(Performance, PerformanceAdmin)
 admin.site.register(Performer, PerformerAdmin)
+admin.site.register(About, AboutAdmin)
+admin.site.register(Bio, BioAdmin)
+admin.site.register(Home, HomeAdmin)

@@ -140,3 +140,42 @@ class Performer(models.Model):
 
     def __str__(self):
         return "{}".format(self.performer)
+
+
+class About(models.Model):
+    section_code = models.CharField(max_length=10)
+    section_name = models.CharField(max_length=40, null=True, blank=True)
+    text = models.TextField(null=True, blank=True)
+    language = models.CharField(max_length=2)
+
+    class Meta:
+        verbose_name_plural = "About page texts"
+
+    def __str__(self):
+        return "{} - {}".format(self.language, self.section_code)
+
+
+class Bio(models.Model):
+    page_title = models.CharField(max_length=200, null=True, blank=True)
+    text = models.TextField(null=True, blank=True)
+    language = models.CharField(max_length=2)
+
+    class Meta:
+        verbose_name_plural = "Bio page texts"
+
+    def __str__(self):
+        return self.language
+
+
+class Home(models.Model):
+    page_title = models.CharField(max_length=200, null=True, blank=True)
+    text = models.TextField(null=True, blank=True)
+    language = models.CharField(max_length=2)
+
+    class Meta:
+        verbose_name_plural = "Home page texts"
+
+    def __str__(self):
+        return self.language
+
+

@@ -5,7 +5,12 @@ from django.views import generic
 from django.core.paginator import Paginator
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 
-from .models import Opus, Genre, Performance
+from .models import (Opus,
+                     Genre,
+                     Performance,
+                     Home,
+                     Bio,
+                     About,)
 
 
 CAT_INFO = 'cat_info'
@@ -16,6 +21,7 @@ CATEGORIES = 'categories'
 YEARS = 'years'
 CURRENT = 'current'
 ALL_PERFORM = 'all_perform'
+TEXT_CONTENT = 'text_content'
 
 def home(request):
     '''
@@ -24,6 +30,19 @@ def home(request):
     performances = Performance.objects.filter(video_url__isnull=False).exclude(video_url="")
     performance_ids = [performance.performance_id for performance in performances]
     current = Performance.objects.get(pk=random.choice(performance_ids))
+    path = request.path
+    if '/ru/' in path:
+        text = Home.objects.get(language='ru')
+    elif '/hy/' in path:
+        try:
+            text = Home.objects.get(language='hy')
+        except Home.DoesNotExist:
+            text = Home.objects.get(language='ru')
+    else:
+        try:
+            text = Home.objects.get(language='en')
+        except Home.DoesNotExist:
+            text = Home.objects.get(language='ru')
 
     def chunks(l, n):
         """Yield successive n-sized chunks from l."""
@@ -35,7 +54,8 @@ def home(request):
 
     context = {
         CURRENT: current,
-        ALL_PERFORM: perform_chunks
+        ALL_PERFORM: perform_chunks,
+        TEXT_CONTENT: text
     }
 
     return render(request, 'works/home.html', context)
@@ -45,7 +65,20 @@ def bio(request):
     '''
     Ознакомительная страница о творчестве
     '''
-    return render(request, 'works/bio.html')
+    path = request.path
+    if '/ru/' in path:
+        text = Bio.objects.get(language='ru')
+    elif '/hy/' in path:
+        try:
+            text = Bio.objects.get(language='hy')
+        except Bio.DoesNotExist:
+            text = Bio.objects.get(language='ru')
+    else:
+        try:
+            text = Bio.objects.get(language='en')
+        except Bio.DoesNotExist:
+            text = Bio.objects.get(language='ru')
+    return render(request, 'works/bio.html', {TEXT_CONTENT: text})
 
 
 def about(request):
