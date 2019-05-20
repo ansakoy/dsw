@@ -3,9 +3,34 @@
 {% load i18n %}
 
 {% block page_content %}
-<h2>О проекте</h2>
 
-{% get_current_language as LANGUAGE_CODE %}
+<div class="global-container container col-md-8">
+    <div class="container pt-4">
+        <h1 class="page-header">О проекте</h1>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-general">
+            {{ general.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-sections">
+            <h3 class="text-subtitle">{{ sections.section_name|safe }}</h3>
+            {{ sections.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-license">
+            <h3 class="text-subtitle"><a name="license">{{ license.section_name|safe }}</a></h3>
+            {{ license.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section"  id="about-privacy">
+            <h3 class="text-subtitle">{{ privacy.section_name|safe }}</h3>
+            {{ privacy.text|safe }}
+        </div>
+    </div>
+</div>
 
-<h2>{{ LANGUAGE_CODE }}</h2>
 {% endblock %}

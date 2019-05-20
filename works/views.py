@@ -85,7 +85,20 @@ def about(request):
     '''
     Страница о проекте
     '''
-    return render(request, 'works/about.html')
+    path = request.path
+    if '/ru/' in path:
+        text = About.objects.filter(language='ru')
+    elif '/hy/' in path:
+        text = About.objects.filter(language='hy')
+    else:
+        text = About.objects.filter(language='en')
+    context = {
+        'license': text.get(section_code='license'),
+        'privacy': text.get(section_code='privacy'),
+        'sections': text.get(section_code='sections'),
+        'general': text.get(section_code='general')
+    }
+    return render(request, 'works/about.html', context)
 
 
 def get_context_for_filters(request):

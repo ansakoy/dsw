@@ -3,6 +3,15 @@
 }
 
 
+#cc-image {
+    opacity: 0.4;
+}
+
+#cc-image:hover {
+    opacity: 0.8;
+}
+
+
 .thumb {
     padding: 10px;
     color: gray;
