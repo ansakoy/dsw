@@ -96,7 +96,8 @@ def about(request):
         'license': text.get(section_code='license'),
         'privacy': text.get(section_code='privacy'),
         'sections': text.get(section_code='sections'),
-        'general': text.get(section_code='general')
+        'general': text.get(section_code='general'),
+        'contacts': text.get(section_code='contacts')
     }
     return render(request, 'works/about.html', context)
 

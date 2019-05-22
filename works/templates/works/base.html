@@ -63,23 +63,23 @@
 
 <!--Конец навигационной панели-->
 
-<!--<div class="container">-->
+<!--<div class="container pt-4 py-5">-->
     {% block page_content %}
     {% endblock %}
-<!--</div>-->
+</div>
 
 {% block page_list %}
 {% endblock %}
 
 <!-- Universal page footer-->
-<footer class="bg-dark pt-4">
+<footer class="pt-4">
     <div class="container pt-4 text-center text-md-left text-muted small"> <!-- Footer Menu-->
 
         <!-- Footer Upper-->
         <div class="row footer-row">
 
             <!-- Navigation -->
-            <div class="col-md-3 mt-md-0 mt-3">
+            <div class="col-md-2 mt-md-0 mt-3">
                 <ul class="list-unstyled text-uppercase"><!-- Navigation links -->
                     <li><h5><a class="footer-menu" href="{% url 'works:home' %}">Главная</a></h5></li>
                     <li><h5><a class="footer-menu" href="{% url 'works:catalog' %}">Каталог</a></h5></li>
@@ -91,28 +91,36 @@
             <!-- Copyright -->
             <div class="col-md-6 mt-md-0 mt-3">
                 <h5 class="text-uppercase">Условия использования</h5>
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img id="cc-image" alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Материалы этого сайта доступны по лицензии <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
+                <a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img id="cc-image" alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+                <br />Материалы этого сайта доступны по лицензии <a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
                 <p>Материалы с других платформ (например, YouTube), транслируемые на сайт, могут иметь иные условия использования.</p>
                 <p><a class="footer-menu" href="{% url 'works:about' %}#license">Подробнее</a></p>
             </div> <!-- /end col-->
 
             <!-- Contacts -->
-            <div class="col-md-3 mt-md-0 mt-3">
+            <div class="col-md-4 mt-md-0 mt-3">
                 <h5 class="text-uppercase">Контакты</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="footer-menu" href="#">Подробнее</a></p>
+                <p>Техническая поддержка: <a class="footer-menu" href="mailto:support@davidsakoyan.info ">support@davidsakoyan.info</a>
+                <br/>По иным вопросам: <a class="footer-menu" href="mailto:info@davidsakoyan.info">info@davidsakoyan.info</a></p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="footer-menu" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="footer-menu" href="https://www.youtube.com/channel/UCfkBAhVPsLislGB1-ocCIqg" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p><a class="footer-menu" href="{% url 'works:about' %}#contacts">Подробнее</a></p>
 
             </div> <!-- /end col-->
 
         </div> <!-- /end footer-row-->
 
-        <!-- Footer Lower-->
-        <div class="row footer-row">
+
+    </div> <!-- /Footer Menu-->
+
+            <!-- Footer Lower-->
+        <div class="row-fluid footer-row cc-row text-muted small py-3">
             <div class="mx-auto">
-                <i class="fab fa-creative-commons"></i> 2019 <a class="footer-menu" href="https://github.com/ansakoy">Ansakoy</a>
+                <a class="footer-menu" href="https://github.com/ansakoy">Ansakoy</a> <i class="fab fa-creative-commons"></i> 2019
             </div>
         </div><!-- /end footer-row-->
-    </div> <!-- /Footer Menu-->
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

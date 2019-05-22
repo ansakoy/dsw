@@ -1,5 +1,12 @@
+/* Navbar */
+
 .navbar-brand:hover {
     opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
 }
 
 
@@ -11,6 +18,33 @@
     opacity: 0.8;
 }
 
+.cc-row {
+    background-color: #24292d;
+}
+
+
+/* Footer links */
+.footer-menu {
+ color: #9DADBD;
+}
+
+.footer-menu:hover {
+    color: #9DADBD;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+/* Catalogue links */
+a {
+    color: #9DADBD;
+}
+
+a:hover {
+    color: #3A4856;
+    text-decoration: none;
+}
+
+/* Playlist */
 
 .thumb {
     padding: 10px;
@@ -41,4 +75,19 @@
 .carousel-control-next {
     right: -10%;
     top: -30%;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    padding-left: 0px;
+    list-style: none;
+    justify-content: center;
+}
+
+.paginator-box .pagination>li.active>a {
+  background: #3B5367;
+  border: 1px solid #3B5367;
+  color: #fff !important;
 }
