@@ -62,6 +62,7 @@ class GenreAdmin(admin.ModelAdmin):
         }),
     ]
     search_fields = ('name_ru',)
+    list_display = ('name_ru', 'genre_id',)
 
 
 class PerformerAdmin(admin.ModelAdmin):

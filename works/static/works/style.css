@@ -36,7 +36,7 @@ footer {
 
 /* Catalogue links */
 a {
-    color: #9DADBD;
+    color: #3D7584;
 }
 
 a:hover {
@@ -90,4 +90,8 @@ a:hover {
   background: #3B5367;
   border: 1px solid #3B5367;
   color: #fff !important;
+}
+
+.page-link {
+    color: #3B5367!important;
 }

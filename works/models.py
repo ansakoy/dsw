@@ -42,7 +42,7 @@ class Opus(models.Model):
     # performances = OneToManyField(Performance, verbose_name="Исполнения")
     genre = models.ForeignKey(
         Genre,
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         related_name="works",
         verbose_name="Жанр",
         null=True
