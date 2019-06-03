@@ -5,17 +5,23 @@
 {% block page_content %}
 {% get_current_language as LANGUAGE_CODE %}
 
-<div class="container pt-5 mt-5">
+<div class="global-container container col-md-8">
+<div class="container pt-5">
+    <!--Если opus exists-->
+    {% if opus %}
+    <!--Русский-->
+
+    {% if LANGUAGE_CODE == 'ru' %}
+
+    <div class="opus_header pb-5">
+        <h1 class="opus_title">{{ opus.title_ru }}</h1>
+        <h2 class="opus_subtitle">{{ opus.subtitle_ru }}</h2>
+    </div>
+
     <div class="row">
         <div class="col-md-6 works-results">
 
             <div class="container opus">
-
-                <!--Русский-->
-
-                {% if LANGUAGE_CODE == 'ru' %}
-                <h1 class="opus_title">{{ opus.title_ru }}</h1>
-                <h2 class="opus_subtitle">{{ opus.subtitle_ru }}</h2>
                 <p class="opus_year">{{ opus.year }}</p>
                 {% if opus.libretto_by.count == 1 %}
                 <p class="opus_libretto">Автор либретто: {{ opus.libretto_by.first.fname_ru }} {{ opus.libretto_by.first.lname_ru }}</p>
@@ -40,17 +46,16 @@
                 <p class="opus_comment">{{ opus.comment_ru }}</p>
                 <p class="opus_category"> Категория: {{ opus.genre.name_ru }}</p>
                 <hr>
-                Другие сочинения в этой категории:
-                <ul>
+                <p>Другие сочинения в этой категории:</p>
+                <ul class="other-works">
 
                     {% for work in related_works %}
                     <li>
-                        <a href="{% url 'works:opus' work.pk %}">{{ work.title_ru }} {{ work.subtitle_ru }}</a>
+                        <a href="{% url 'works:opus' work.pk %}">{{ work.title_ru }} - {{ work.subtitle_ru }}</a>
                     </li>
                 {% endfor %}
                 </ul>
                 {% endif %}
-                <!--Армянский-->
             </div>
         </div>
             <hr>
@@ -65,9 +70,6 @@
                             {% if performance.name_ru %}<h2 class="performance-name">{{ performance.name_ru }}</h2>{% endif %}
                             {% if performance.video_url%}
                                 <iframe width="500" height="281.25" src="https://www.youtube.com/embed/{{ performance.video_url }}" frameborder="0"></iframe>
-                            {% endif %}
-                            {% if performance.audio_url%}
-                            <iframe width="500" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ performance.audio_url }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                             {% endif %}
                             {% if performance.perform_date%}
                                 <p>{{ performance.perform_date }}</p>
@@ -90,6 +92,11 @@
         </div>
 
         </div>
+    <!--Если opus does not exist-->
+    {% else %}
+    <div>Такого сочинения в каталоге нет</div>
+    {% endif %}
     </div>
 </div>
+
 {% endblock %}

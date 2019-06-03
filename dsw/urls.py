@@ -28,3 +28,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', include('works.urls')),
 )
+
+
+handler404 = 'works.views.handler404'
+handler500 = 'works.views.handler500'

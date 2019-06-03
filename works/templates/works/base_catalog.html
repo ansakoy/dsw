@@ -5,6 +5,9 @@
 {% block page_content %}
 <div class="global-container container col-md-8">
 
+
+<!-- Catalogue -->
+
 <div class="container pt-4">
 <h1 class="page-header">Каталог сочинений</h1>
 </div>
@@ -17,8 +20,13 @@
     <div class="row">
         <div class="col-md-8 works-results">
             {% if works %}
+
+            <!-- Works Table -->
             <table class="works-table">
                 {% get_current_language as LANGUAGE_CODE %}
+
+                <!-- Русский -->
+
                 {% if LANGUAGE_CODE == 'ru' %}
 
                 {% for opus in works %}
@@ -42,21 +50,29 @@
                 {% endfor %}
                 {% endif %}
 
+                <!-- /Русский -->
             </table>
+            <!-- /Works Table -->
             {% else %}
             <h2>{% block no_works %}{% endblock %}</h2>
             {% endif %}
         </div>
+
+        <!-- Search & Filter Tools -->
         <div class="container col-md-4 filter-panel">
             {% block filters %}
             {% endblock %}
         </div>
+        <!-- /Search & Filter Tools -->
     </div>
 </div>
 
 {% endblock %}
 
 {% block page_list %}
+
+
+<!-- Pagination -->
 
 <div class="container pb-5 pagination-footer">
     <div class="paginator-box">
@@ -95,5 +111,8 @@
         {% endif %}
     </div>
 </div>
+
+<!-- /Pagination -->
+
 </div>
 {% endblock %}

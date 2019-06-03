@@ -44,6 +44,24 @@ a:hover {
     text-decoration: none;
 }
 
+/* Opus detail */
+ul.other-works {
+    list-style: none;
+}
+
+ul.other-works li::before {
+    content: "\25AA";
+    color: #3D7584;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+/* Catalogue filters */
+.filter-tool {
+    padding-top: 1em;
+}
+
 /* Playlist */
 
 .thumb {

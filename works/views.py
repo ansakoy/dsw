@@ -1,6 +1,6 @@
 import random
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views import generic
 from django.core.paginator import Paginator
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
@@ -231,6 +231,17 @@ class OpusView(generic.DetailView):
         context['related_works'] = related_works
         return context
 
+
+def handler404(request):
+    return render(request,
+                  'works/404.html',
+                  status=404)
+
+
+def handler500(request):
+    return render(request,
+                  'works/500.html',
+                  status=500)
 
 
 
