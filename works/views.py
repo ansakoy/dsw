@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.core.paginator import Paginator
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.http import HttpResponse
 
 from .models import (Opus,
                      Genre,
@@ -232,16 +233,6 @@ class OpusView(generic.DetailView):
         return context
 
 
-def handler404(request):
-    return render(request,
-                  'works/404.html',
-                  status=404)
-
-
-def handler500(request):
-    return render(request,
-                  'works/500.html',
-                  status=500)
 
 
 

@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 
+
 from dsw import settings
 
 urlpatterns = [
@@ -29,6 +30,4 @@ urlpatterns += i18n_patterns(
     path('', include('works.urls')),
 )
 
-
-handler404 = 'works.views.handler404'
-handler500 = 'works.views.handler500'
+# handler404 = 'works.views.handler404' [строка, если снять комментарий, дает ошибку 500, удобно тестировать страницу]

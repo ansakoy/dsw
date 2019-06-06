@@ -113,3 +113,15 @@ ul.other-works li::before {
 .page-link {
     color: #3B5367!important;
 }
+
+
+/* Error pages */
+.error-num {
+    font-size: 100pt;
+    color: #9DADBD;
+}
+
+.error-frame {
+    margin-top: 50pt;
+    margin-bottom: 50pt;
+}
