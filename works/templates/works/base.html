@@ -24,9 +24,9 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item"><a class="nav-link" href="{% url 'works:catalog' %}">Каталог</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'works:bio' %}">Творчество</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'works:about' %}">О проекте</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:catalog' %}">{% trans "Каталог" %}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:bio' %}">{% trans "Творчество" %}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:about' %}">{% trans "О проекте" %}</a></li>
 
     </ul>
       <ul class="navbar-nav flex-row mt-2 mt-lg-0">
@@ -79,34 +79,34 @@
         <div class="row footer-row">
 
             <!-- Navigation -->
-            <div class="col-md-2 mt-md-0 mt-3">
+            <div class="col-md-3 mt-md-0 mt-3">
                 <ul class="list-unstyled text-uppercase"><!-- Navigation links -->
-                    <li><h5><a class="footer-menu" href="{% url 'works:home' %}">Главная</a></h5></li>
-                    <li><h5><a class="footer-menu" href="{% url 'works:catalog' %}">Каталог</a></h5></li>
-                    <li><h5><a class="footer-menu" href="{% url 'works:bio' %}">Творчество</a></h5></li>
-                    <li><h5><a class="footer-menu" href="{% url 'works:about' %}">О проекте</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:home' %}">{% trans "Главная" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:catalog' %}">{% trans "Каталог" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:bio' %}">{% trans "Творчество" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:about' %}">{% trans "О проекте" %}</a></h5></li>
                 </ul>
             </div> <!-- /end col-->
 
             <!-- Copyright -->
-            <div class="col-md-6 mt-md-0 mt-3">
-                <h5 class="text-uppercase">Условия использования</h5>
+            <div class="col-md-5 mt-md-0 mt-3">
+                <h5 class="text-uppercase">{% trans "Условия использования" %}</h5>
                 <a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img id="cc-image" alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-                <br />Материалы этого сайта доступны по лицензии <a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
-                <p>Материалы с других платформ (например, YouTube), транслируемые на сайт, могут иметь иные условия использования.</p>
-                <p><a class="footer-menu" href="{% url 'works:about' %}#license">Подробнее</a></p>
+                <br />{% trans "Материалы этого сайта доступны по лицензии " %}<a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
+                <p>{% trans "Материалы с других платформ (например, YouTube), транслируемые на сайт, могут иметь иные условия использования." %}</p>
+                <p><a class="footer-menu" href="{% url 'works:about' %}#license">{% trans "Подробнее" %}</a></p>
             </div> <!-- /end col-->
 
             <!-- Contacts -->
             <div class="col-md-4 mt-md-0 mt-3">
-                <h5 class="text-uppercase">Контакты</h5>
-                <p>Техническая поддержка: <a class="footer-menu" href="mailto:support@davidsakoyan.info ">support@davidsakoyan.info</a>
-                <br/>По иным вопросам: <a class="footer-menu" href="mailto:info@davidsakoyan.info">info@davidsakoyan.info</a></p>
+                <h5 class="text-uppercase">{% trans "Контакты" %}</h5>
+                <p>{% trans "Техническая поддержка: " %}<a class="footer-menu" href="mailto:support@davidsakoyan.info ">support@davidsakoyan.com</a>
+                <br/>{% trans "По иным вопросам: " %}<a class="footer-menu" href="mailto:info@davidsakoyan.info">info@davidsakoyan.com</a></p>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a class="footer-menu" href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="list-inline-item"><a class="footer-menu" href="https://www.youtube.com/channel/UCfkBAhVPsLislGB1-ocCIqg" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-                <p><a class="footer-menu" href="{% url 'works:about' %}#contacts">Подробнее</a></p>
+                <p><a class="footer-menu" href="{% url 'works:about' %}#contacts">{% trans "Подробнее" %}</a></p>
 
             </div> <!-- /end col-->
 

@@ -16,6 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\dsw\settings.py:120
 msgid "Russian"
@@ -32,90 +33,92 @@ msgstr ""
 #: .\works\templates\works\about.html:9 .\works\templates\works\base.html:29
 #: .\works\templates\works\base.html:87
 msgid "О проекте"
-msgstr "Կայքի մասին"
+msgstr "About"
 
 #: .\works\templates\works\base.html:27 .\works\templates\works\base.html:85
 msgid "Каталог"
-msgstr "Կատալոգ"
+msgstr "Catalogue"
 
 #: .\works\templates\works\base.html:28 .\works\templates\works\base.html:86
 msgid "Творчество"
-msgstr "Կենսագրություն"
+msgstr "Bio"
 
 #: .\works\templates\works\base.html:84
 msgid "Главная"
-msgstr "Գլխավոր էջ"
+msgstr "Home"
 
 #: .\works\templates\works\base.html:93
 msgid "Условия использования"
-msgstr "Օգտագործման պայմաններ"
+msgstr "Terms of use"
 
 #: .\works\templates\works\base.html:95
 msgid "Материалы этого сайта доступны по лицензии "
-msgstr ""
+msgstr "Materials of this site are available under "
 
 #: .\works\templates\works\base.html:96
 msgid ""
 "Материалы с других платформ (например, YouTube), транслируемые на сайт, "
 "могут иметь иные условия использования."
 msgstr ""
+"Materials hosted on outside resources, such as YouTube, may have their "
+"specific terms of use"
 
 #: .\works\templates\works\base.html:97 .\works\templates\works\base.html:109
 msgid "Подробнее"
-msgstr ""
+msgstr "Detail"
 
 #: .\works\templates\works\base.html:102
 msgid "Контакты"
-msgstr "Հետադարձ կապ"
+msgstr "Contacts"
 
 #: .\works\templates\works\base.html:103
 msgid "Техническая поддержка: "
-msgstr "Սեխնիկական աջակցություն"
+msgstr "Technical support: "
 
 #: .\works\templates\works\base.html:104
 msgid "По иным вопросам: "
-msgstr ""
+msgstr "Otherwise: "
 
 #: .\works\templates\works\base_catalog.html:12
 msgid "Каталог сочинений"
-msgstr "Կատալոգ"
+msgstr "Catalogue"
 
 #: .\works\templates\works\base_catalog.html:15
 msgid "Найдено сочинений: "
-msgstr ""
+msgstr "Works found: "
 
 #: .\works\templates\works\catalog.html:9
 msgid "Поиск сочинений"
-msgstr ""
+msgstr "Search catalogue"
 
 #: .\works\templates\works\catalog.html:14
 msgid "Категория"
-msgstr ""
+msgstr "Category"
 
 #: .\works\templates\works\catalog.html:17
 msgid "Все категории"
-msgstr ""
+msgstr "All categories"
 
 #: .\works\templates\works\catalog.html:26
 msgid "Год"
-msgstr ""
+msgstr "Year"
 
 #: .\works\templates\works\catalog.html:28
 msgid "Все годы"
-msgstr ""
+msgstr "All years"
 
 #: .\works\templates\works\catalog.html:38
 msgid "Только сочинения с записями"
-msgstr ""
+msgstr "Only works with recordings"
 
 #: .\works\templates\works\catalog.html:45
 msgid "Сбросить фильтры"
-msgstr ""
+msgstr "Clear filters"
 
 #: .\works\templates\works\home.html:8
 msgid "Русская страница"
-msgstr "Հայկական էջ"
+msgstr ""
 
 #: .\works\templates\works\home.html:10
 msgid "Some other text"
-msgstr "Բարարան օնլայն շատ լավ է"
+msgstr ""

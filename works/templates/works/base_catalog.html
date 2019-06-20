@@ -9,10 +9,10 @@
 <!-- Catalogue -->
 
 <div class="container pt-4">
-<h1 class="page-header">Каталог сочинений</h1>
+<h1 class="page-header">{% trans "Каталог сочинений" %}</h1>
 </div>
 <div class="container condition">
-    <h3>{% block condition %}Найдено сочинений: {{ works.paginator.count }}{% endblock %}</h3>
+    <h3>{% block condition %}{% trans "Найдено сочинений: " %}{{ works.paginator.count }}{% endblock %}</h3>
     {% block search_term %}{% endblock %}
 </div>
 
