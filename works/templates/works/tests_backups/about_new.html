@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'works/style.css' %}">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="{% url 'works:home' %}"><img src='{% static "works/dsw_logo_transparent.png" %}' width="70"/></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:catalog' %}">{% trans "Каталог" %}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:bio' %}">{% trans "Творчество" %}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'works:about' %}">{% trans "О проекте" %}</a></li>
+
+    </ul>
+      <ul class="navbar-nav flex-row mt-2 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UCfkBAhVPsLislGB1-ocCIqg" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://soundcloud.com/user-678384227" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-yandex"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-spotify"></i></a></li>
+      </ul>
+
+      <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="text" value="{{ redirect_to }}">
+          <select name="language" class="form-control" onchange="this.form.submit()">
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+              {% endfor %}
+          </select>
+          <!--<input type="submit" value="Выбрать">-->
+      </form>
+
+    <!--<form class="form-inline my-2 my-lg-0" action="{# url 'works:search' #}" method="get">-->
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Поиск сочинений" aria-label="Search" name="q" value="{{ search_info }}">-->
+      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>-->
+    <!--</form>-->
+
+  </div>
+</nav>
+
+
+
+<!--<page_content>-->
+
+<!--<global-container>-->
+<div class="global-container container col-md-8 py-3" style="border: 1px solid #3B5367;">
+
+    <!--<header-container>-->
+    <div class="container pt-3 header-container" style="border: 1px solid #3B5367;">
+        <h1>О проекте</h1>
+    </div> <!--</header-container>-->
+
+    <!--<grid-wrapper>-->
+    <div class="container pb-3 grid-wrapper" style="border: 1px solid #3B5367;">
+
+        <!--<about-general-row>-->
+        <div class="row page-section mt-4" id="about-general" style="border: 1px solid #3B5367;">
+
+            <div class="col-md-12 pt-3" style="border: 1px solid #3B5367;">
+                <div class="paragraph-contents"  style="border: 1px solid #3B5367;">
+                    Этот проект посвящен творчеству армянского композитора Давида Сакояна. Здесь можно найти каталог его сочинений, послушать некоторые записи, почитать о его музыке. Цель проекта в том, чтобы собрать на одной платформе всё, что касается творчества этого композитора, и тем самым дать возможность всем желающим ознакомиться с его произведениями. Доступных записей пока прискорбно мало, и среди них нет студийных (только концертные). Однако мы надеемся на расширение коллекции записей. Каталог также обновляется по мере появления новых сочинений.
+                </div>
+            </div><!--<end-col>-->
+
+        </div> <!--</about-general-row>-->
+
+        <!--<sections-row>-->
+        <div class="row page-section mt-4" id="about-sections" style="border: 1px solid #3B5367;">
+
+            <div class="col-md-12 pt-3" style="border: 1px solid #3B5367;">
+                <div class="paragraph-title"  style="border: 1px solid #3B5367;">
+                    <h4>Разделы</h4>
+                </div> <!--</paragraph-title>-->
+                <div class="paragraph-contents"  style="border: 1px solid #3B5367;">
+                    На <strong>главной странице</strong> находится плейлист со всеми записями исполнений, которые сейчас доступны и размещены на разных каналах YouTube.<br>
+В разделе &ldquo;<strong>Каталог</strong>&rdquo; находится перечень сочинений, который пополняется по мере появления новых. Для удобства просмотра записей каталог снабжен инструментами фильтрации (по жанрам и годам) и поиска. В каталоге представлены преимущественно произведения, написанные начиная с 1990 года. От большинства своих более ранних произведений Давид Сакоян отказался.<br>
+Раздел &ldquo;<strong>Творчество</strong>&rdquo; рассказывает о том, какую музыку пишет Давид Сакоян, и о контексте создания этой музыки.
+                </div><!--</paragraph-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</sections-row>-->
+
+        <!--<license-row>-->
+        <div class="row page-section mt-4" id="about-license" style="border: 1px solid #3B5367;">
+
+            <div class="col-md-12 pt-3" style="border: 1px solid #3B5367;">
+                <div class="paragraph-title"  style="border: 1px solid #3B5367;">
+                    <h4>Заголовок параграфа</h4>
+                </div> <!--</license-title>-->
+                <div class="paragraph-contents"  style="border: 1px solid #3B5367;">
+                    Содержание параграфа (Лицензия)
+                </div><!--</license-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</license-row>-->
+
+        <!--<privacy-row>-->
+        <div class="row page-section mt-4" id="about-privacy" style="border: 1px solid #3B5367;">
+
+            <div class="col-md-12 pt-3" style="border: 1px solid #3B5367;">
+                <div class="paragraph-title"  style="border: 1px solid #3B5367;">
+                    <h4>Заголовок параграфа</h4>
+                </div> <!--</privacy-title>-->
+                <div class="paragraph-contents"  style="border: 1px solid #3B5367;">
+                    Содержание параграфа (Конфиденциальность)
+                </div><!--</privacy-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</privacy-row>-->
+
+                <!--<contacts-row>-->
+        <div class="row page-section mt-4" id="about-contacts" style="border: 1px solid #3B5367;">
+
+            <div class="col-md-12 pt-3" style="border: 1px solid #3B5367;">
+                <div class="paragraph-title"  style="border: 1px solid #3B5367;">
+                    <h4>Заголовок параграфа</h4>
+                </div> <!--</contacts-title>-->
+                <div class="paragraph-contents"  style="border: 1px solid #3B5367;">
+                    Содержание параграфа (Конфиденциальность)
+                </div><!--</contacts-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</contacts-row>-->
+
+
+    </div> <!--</grid-wrapper>-->
+
+
+    <hr>
+
+
+</div> <!--</global-container>-->
+
+
+
+<!--</page_content>-->
+
+
+<!-- Universal page footer-->
+<footer class="pt-4">
+    <div class="container pt-4 text-center text-md-left text-muted small"> <!-- Footer Menu-->
+
+        <!-- Footer Upper-->
+        <div class="row footer-row">
+
+            <!-- Navigation -->
+            <div class="col-md-3 mt-md-0 mt-3">
+                <ul class="list-unstyled text-uppercase"><!-- Navigation links -->
+                    <li><h5><a class="footer-menu" href="{% url 'works:home' %}">{% trans "Главная" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:catalog' %}">{% trans "Каталог" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:bio' %}">{% trans "Творчество" %}</a></h5></li>
+                    <li><h5><a class="footer-menu" href="{% url 'works:about' %}">{% trans "О проекте" %}</a></h5></li>
+                </ul>
+            </div> <!-- /end col-->
+
+            <!-- Copyright -->
+            <div class="col-md-5 mt-md-0 mt-3">
+                <h5 class="text-uppercase">{% trans "Условия использования" %}</h5>
+                <a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img id="cc-image" alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+                <br />{% trans "Материалы этого сайта доступны по лицензии " %}<a class="footer-menu" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
+                <p>{% trans "Материалы с других платформ (например, YouTube), транслируемые на сайт, могут иметь иные условия использования." %}</p>
+                <p><a class="footer-menu" href="{% url 'works:about' %}#license">{% trans "Подробнее" %}</a></p>
+            </div> <!-- /end col-->
+
+            <!-- Contacts -->
+            <div class="col-md-4 mt-md-0 mt-3">
+                <h5 class="text-uppercase">{% trans "Контакты" %}</h5>
+                <p>{% trans "Техническая поддержка: " %}<a class="footer-menu" href="mailto:support@davidsakoyan.info ">support@davidsakoyan.com</a>
+                <br/>{% trans "По иным вопросам: " %}<a class="footer-menu" href="mailto:info@davidsakoyan.info">info@davidsakoyan.com</a></p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="footer-menu" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="footer-menu" href="https://www.youtube.com/channel/UCfkBAhVPsLislGB1-ocCIqg" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p><a class="footer-menu" href="{% url 'works:about' %}#contacts">{% trans "Подробнее" %}</a></p>
+
+            </div> <!-- /end col-->
+
+        </div> <!-- /end footer-row-->
+
+
+    </div> <!-- /Footer Menu-->
+
+            <!-- Footer Lower-->
+        <div class="row-fluid footer-row cc-row text-muted small py-3 text-center">
+            <div class="text-center">
+                <a class="footer-menu" href="https://github.com/ansakoy">Ansakoy</a> <i class="fab fa-creative-commons"></i> 2019
+            </div>
+        </div><!-- /end footer-row-->
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{% static 'works/front.js' %}" type="text/javascript"></script>
+</body>
+</html>

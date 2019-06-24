@@ -4,39 +4,95 @@
 
 {% block page_content %}
 
-<div class="global-container container col-md-8">
-    <div class="container pt-4">
-        <h1 class="page-header">{% trans "О проекте" %}</h1>
-    </div>
-    <div class="col-md-12 content">
-        <div class="page-section" id="about-general">
-            {{ general.text|safe }}
-        </div>
-    </div>
-    <div class="col-md-12 content">
-        <div class="page-section" id="about-sections">
-            <h3 class="text-subtitle">{{ sections.section_name|safe }}</h3>
-            {{ sections.text|safe }}
-        </div>
-    </div>
-    <div class="col-md-12 content">
-        <div class="page-section" id="about-license">
-            <h3 class="text-subtitle"><a name="license">{{ license.section_name|safe }}</a></h3>
-            {{ license.text|safe }}
-        </div>
-    </div>
-    <div class="col-md-12 content">
-        <div class="page-section"  id="about-privacy">
-            <h3 class="text-subtitle">{{ privacy.section_name|safe }}</h3>
-            {{ privacy.text|safe }}
-        </div>
-    </div>
-    <div class="col-md-12 content">
-        <div class="page-section"  id="about-contacts">
-            <h3 class="text-subtitle"><a name="contacts">{{ contacts.section_name|safe }}</a></h3>
-            {{ contacts.text|safe }}
-        </div>
-    </div>
-</div>
+<!--<page_content>-->
+
+<!--<global-container>-->
+<div class="global-container container col-md-8 py-3">
+
+    <!--<header-container>-->
+    <div class="container pt-3 header-container">
+        <h1>{% trans "О проекте" %}</h1>
+    </div> <!--</header-container>-->
+
+    <!--<grid-wrapper>-->
+    <div class="container pb-3 grid-wrapper">
+
+        <!--<about-general-row>-->
+        <div class="row page-section mt-4" id="about-general">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-contents">
+                    {{ general.text|safe }}
+                </div>
+            </div><!--<end-col>-->
+
+        </div> <!--</about-general-row>-->
+
+        <!--<sections-row>-->
+        <div class="row page-section mt-4" id="about-sections">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4>{{ sections.section_name|safe }}</h4>
+                </div> <!--</paragraph-title>-->
+                <div class="paragraph-contents">
+                    {{ sections.text|safe }}
+                </div><!--</paragraph-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</sections-row>-->
+
+        <!--<license-row>-->
+        <div class="row page-section mt-4" id="about-license">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4><a name="license">{{ license.section_name|safe }}</a></h4>
+                </div> <!--</license-title>-->
+                <div class="paragraph-contents">
+                    {{ license.text|safe }}
+                </div><!--</license-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</license-row>-->
+
+        <!--<privacy-row>-->
+        <div class="row page-section mt-4" id="about-privacy">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4>{{ privacy.section_name|safe }}</h4>
+                </div> <!--</privacy-title>-->
+                <div class="paragraph-contents">
+                    {{ privacy.text|safe }}
+                </div><!--</privacy-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</privacy-row>-->
+
+                <!--<contacts-row>-->
+        <div class="row page-section mt-4" id="about-contacts">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4><a name="contacts">{{ contacts.section_name|safe }}</a></h4>
+                </div> <!--</contacts-title>-->
+                <div class="paragraph-contents">
+                    {{ contacts.text|safe }}
+                </div><!--</contacts-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</contacts-row>-->
+
+
+    </div> <!--</grid-wrapper>-->
+
+
+    <hr>
+
+
+</div> <!--</global-container>-->
+
+<!--</page_content>-->
 
 {% endblock %}

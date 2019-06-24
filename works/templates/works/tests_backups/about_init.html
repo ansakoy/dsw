@@ -1,0 +1,42 @@
+{% extends 'works/base.html' %}
+
+{% load i18n %}
+
+{% block page_content %}
+
+<div class="global-container container col-md-8">
+    <div class="container pt-4">
+        <h1 class="page-header">{% trans "О проекте" %}</h1>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-general">
+            {{ general.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-sections">
+            <h3 class="text-subtitle">{{ sections.section_name|safe }}</h3>
+            {{ sections.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section" id="about-license">
+            <h3 class="text-subtitle"><a name="license">{{ license.section_name|safe }}</a></h3>
+            {{ license.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section"  id="about-privacy">
+            <h3 class="text-subtitle">{{ privacy.section_name|safe }}</h3>
+            {{ privacy.text|safe }}
+        </div>
+    </div>
+    <div class="col-md-12 content">
+        <div class="page-section"  id="about-contacts">
+            <h3 class="text-subtitle"><a name="contacts">{{ contacts.section_name|safe }}</a></h3>
+            {{ contacts.text|safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
