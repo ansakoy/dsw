@@ -5,92 +5,112 @@
 {% load static %}
 
 {% block page_content %}
-<!--<h2>{% trans "Русская страница" %}</h2>-->
 
-<!--<h2>{% trans "Some other text" %}</h2>-->
+<!--<page_content>-->
 
-<!--{% get_current_language as LANGUAGE_CODE %}-->
+<!--<global-container>-->
+<div class="global-container container col-md-8 py-3">
 
-<!--<h2>{{ LANGUAGE_CODE }}</h2>-->
+    <!--<header-container>-->
+    <div class="container pt-3 header-container">
+        <h1>{{ text_content.page_title }}</h1>
+    </div> <!--</header-container>-->
 
+    <!--<grid-wrapper>-->
+    <div class="container pt-3 grid-wrapper">
 
-<div class="global-container container col-md-8">
+        <!--<intro-and-player-row>-->
+        <div class="row intro-and-player">
 
-<div class="container pt-3">
-<h1 class="page-header">{{ text_content.page_title }}</h1>
-</div>
+            <!--<intro col>-->
+            <div class="col-md-5 pt-3 intro-col">
+                {{ text_content.text|safe }}
+            </div><!--<intro-col>-->
 
-<!--<div class="container pt-4">-->
-    <div class="row">
-        <div class="col-md-5 works-results">
-            {{ text_content.text|safe }}
-        </div>
-        <div class="container col-md-7">
-            <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" id="vid_frame" src="https://www.youtube.com/embed/{{ current.video_url }}" frameborder="0"></iframe>
+            <!--<player-col>-->
+            <div class="container col-md-7 player-col">
 
-            </div>
-            <a href="{% url 'works:opus' current.opus.pk %}" class="opus-title" id="current_desc">{{ current.opus.title_ru }}
+                <!--<embed>-->
+                <div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" id="vid_frame" src="https://www.youtube.com/embed/{{ current.video_url }}" frameborder="0"></iframe>
+                    </div>
+                </div> <!--</embed>-->
+
+                <!--<recording-title>-->
+                <div class="recording-title py-2 px-3">
+                    <a href="{% url 'works:opus' current.opus.pk %}" class="opus-title" id="current_desc">{{ current.opus.title_ru }}
                 {{ current.opus.subtitle_ru }}
                     {% if current.name_ru %} - {{ current.name_ru }}{% endif %}</a>
-        </div>
-    </div>
+                </div> <!--</recording-title>-->
 
-    <!--Плейлист-->
+            </div> <!--</player-col>-->
 
-    <div id="carouselPlaylist" class="carousel slide" data-ride="carousel" data-interval="false">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row playlist">
-                    {% for perform in all_perform.0 %}
-                    <div
-                            class="col-sm thumb"
-                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}?autoplay=1';
-                            document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}';
-                            document.getElementById('current_desc').href='{% url 'works:opus' perform.opus.pk %}'">
-                        <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
-                        <div class="desc">
-                            {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
-                        </div>
-                    </div> <!--/col-->
-                    {% endfor %}
-                </div> <!--/row-->
-            </div> <!--/active-->
-            {% for chunk in all_perform|slice:"1:" %}
-            <div class="carousel-item">
-                <div class="row playlist">
-                    {% for perform in chunk %}
-                    <div
-                            class="col-sm thumb"
-                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}?autoplay=1';
-                                    document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}';
-                                    document.getElementById('current_desc').href='{% url 'works:opus' perform.opus.pk %}'">
-                        <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
-                        <div class="desc">
-                            {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
-                        </div>
-                    </div> <!--/col-->
-                    {% endfor %}
-                </div>
-            </div> <!--/item-->
-            {% endfor %}
-        </div> <!--/inner-->
-        <a class="carousel-control-prev" href="#carouselPlaylist" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded" href="#carouselPlaylist" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
-            <span class="sr-only">Next</span>
-        </a>
+        </div> <!--</intro-and-player-row>-->
 
-    </div> <!--конец плейлиста-->
+        <!--<playlist-row>-->
+        <div class="row playlist">
+            <!--<playlist col>-->
+            <div class="col-md-12 pt-3 playlist-col">
+                <!--Плейлист-->
+                <div id="carouselPlaylist" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row playlist">
+                                {% for perform in all_perform.0 %}
+                                <div
+                                        class="col-sm thumb"
+                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}?autoplay=1';
+                                        document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}';
+                                        document.getElementById('current_desc').href='{% url 'works:opus' perform.opus.pk %}'">
+                                    <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
+                                    <div class="desc">
+                                        {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
+                                    </div>
+                                </div> <!--/col-->
+                                {% endfor %}
+                            </div> <!--/row-->
+                        </div> <!--/active-->
+                        {% for chunk in all_perform|slice:"1:" %}
+                        <div class="carousel-item">
+                            <div class="row playlist">
+                                {% for perform in chunk %}
+                                <div
+                                        class="col-sm thumb"
+                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ perform.video_url }}?autoplay=1';
+                                                document.getElementById('current_desc').textContent='{{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}';
+                                                document.getElementById('current_desc').href='{% url 'works:opus' perform.opus.pk %}'">
+                                    <img class="img-fluid mx-auto d-block" src="http://img.youtube.com/vi/{{ perform.video_url }}/0.jpg" alt="Image"/>
+                                    <div class="desc">
+                                        {{ perform.opus.title_ru }} {{ perform.opus.subtitle_ru }}{% if perform.name_ru %} - {{ perform.name_ru }}{% endif %}
+                                    </div>
+                                </div> <!--/col-->
+                                {% endfor %}
+                            </div>
+                        </div> <!--/item-->
+                        {% endfor %}
+                    </div> <!--/inner-->
+                    <a class="carousel-control-prev" href="#carouselPlaylist" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next text-faded" href="#carouselPlaylist" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div> <!--конец плейлиста-->
+            </div><!--</playlist-col>-->
+        </div> <!--</playlist-row>-->
+
+    </div> <!--</grid-wrapper>-->
 
 
 
+</div> <!--</global-container>-->
 
-    </div>
-</div>
-<!--</div>-->
-<!--</div>-->
+
+
+<!--</page_content>-->
+
 {% endblock %}
