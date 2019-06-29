@@ -12,13 +12,81 @@
 <h2>{{ LANGUAGE_CODE }}</h2>
 {% endcomment %}
 
-<div class="global-container container col-md-8">
-    <div class="container pt-4">
-        <h1 class="page-header">{{ text_content.page_title }}</h1>
-    </div>
-    <img align="right" src='{% static "works/Sakoyan.jpg" %}' width="300" alt="David Sakoyan">
-    <div class="col-md-12 content">
-        {{ text_content.text|safe }}
-    </div>
-</div>
+<!--<page_content>-->
+
+<!--<global-container>-->
+<div class="global-container container col-md-8 py-3">
+
+    <!--<header-container>-->
+    <div class="container pt-3 header-container">
+        <h1>Творчество</h1>
+    </div> <!--</header-container>-->
+
+    <!--<grid-wrapper>-->
+    <div class="container pb-3 grid-wrapper">
+
+        <!--<bio-general-row>-->
+        <div class="row page-section mt-4" id="bio-general">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-contents">
+                    <img align="right" src='{% static "works/Sakoyan2.JPG" %}' width="300" alt="David Sakoyan">
+                    {{ general.text|safe }}
+                </div>
+            </div><!--<end-col>-->
+
+        </div> <!--</bio-general-row>-->
+
+        <!--evolution-row>-->
+        <div class="row page-section mt-4" id="bio-evolution">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4>{{ evolution.section_name|safe }}</h4>
+                </div> <!--</paragraph-title>-->
+                <div class="paragraph-contents">
+                    {{ evolution.text|safe }}
+                </div><!--</evolution-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</evolution-row>-->
+
+        <!--<avant-row>-->
+        <div class="row page-section mt-4" id="bio-avant">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4>{{ avant.section_name|safe }}</h4>
+                </div> <!--</avant-title>-->
+                <div class="paragraph-contents">
+                    {{ avant.text|safe }}
+                </div><!--</avant-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</avant-row>-->
+
+        <!--<privacy-row>-->
+        <div class="row page-section mt-4" id="bio-tradit">
+
+            <div class="col-md-12 pt-3">
+                <div class="paragraph-title">
+                    <h4>{{ tradit.section_name|safe }}</h4>
+                </div> <!--</tradit-title>-->
+                <div class="paragraph-contents">
+                    {{ tradit.text|safe }}
+                </div><!--</tradit-contents>-->
+            </div><!--<end-col>-->
+
+        </div> <!--</tradit-row>-->
+        <hr>
+
+    </div> <!--</grid-wrapper>-->
+
+
+</div> <!--</global-container>-->
+
+
+<!--</page_content>-->
+
+
 {% endblock %}

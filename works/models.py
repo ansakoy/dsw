@@ -159,6 +159,8 @@ class Bio(models.Model):
     page_title = models.CharField(max_length=200, null=True, blank=True)
     text = models.TextField(null=True, blank=True)
     language = models.CharField(max_length=2)
+    section_code = models.CharField(max_length=10, null=True, blank=True)
+    section_name = models.CharField(max_length=40, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Bio page texts"

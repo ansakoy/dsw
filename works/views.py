@@ -68,18 +68,24 @@ def bio(request):
     '''
     path = request.path
     if '/ru/' in path:
-        text = Bio.objects.get(language='ru')
+        text = Bio.objects.filter(language='ru')
     elif '/hy/' in path:
         try:
-            text = Bio.objects.get(language='hy')
+            text = Bio.objects.filter(language='hy')
         except Bio.DoesNotExist:
-            text = Bio.objects.get(language='ru')
+            text = Bio.objects.filter(language='ru')
     else:
         try:
-            text = Bio.objects.get(language='en')
+            text = Bio.objects.filter(language='en')
         except Bio.DoesNotExist:
-            text = Bio.objects.get(language='ru')
-    return render(request, 'works/bio.html', {TEXT_CONTENT: text})
+            text = Bio.objects.filter(language='ru')
+    context = {
+        'evolution': text.get(section_code='evolution'),
+        'tradit': text.get(section_code='tradit'),
+        'avant': text.get(section_code='avant'),
+        'general': text.get(section_code='general')
+    }
+    return render(request, 'works/bio.html', context)
 
 
 def about(request):

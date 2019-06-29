@@ -158,13 +158,13 @@ class AboutAdmin(admin.ModelAdmin):
 class BioAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Meta', {
-            'fields': ['language',]
+            'fields': ['language', 'section_code']
         }),
         ('Content', {
-            'fields': ['page_title', 'text',]
+            'fields': ['page_title', 'section_name', 'text',]
         }),
     ]
-    list_display = ('language',)
+    list_display = ('language', 'section_code',)
 
 
 class HomeAdmin(admin.ModelAdmin):
