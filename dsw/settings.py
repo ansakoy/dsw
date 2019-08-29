@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = PRIVATE['SECRET_KEY']
+# SECRET_KEY = os.environ.get('DSW_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,6 +83,17 @@ WSGI_APPLICATION = 'dsw.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.environ.get('DSW_DB'),
+#         'USER': os.environ.get('DSW_USER'),
+#         'PASSWORD': os.environ.get('DSW_PSWD'),
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 DATABASES = {
     'default': {
