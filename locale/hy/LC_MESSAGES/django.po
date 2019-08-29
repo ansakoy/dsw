@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 12:17+0300\n"
+"POT-Creation-Date: 2019-08-29 11:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,62 +17,107 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\dsw\settings.py:120
+#: .\dsw\settings.py:132
 msgid "Russian"
 msgstr ""
 
-#: .\dsw\settings.py:121
+#: .\dsw\settings.py:133
 msgid "Armenian"
 msgstr ""
 
-#: .\dsw\settings.py:122
+#: .\dsw\settings.py:134
 msgid "English"
 msgstr ""
 
-#: .\works\templates\works\about.html:9 .\works\templates\works\base.html:29
-#: .\works\templates\works\base.html:87
+#: .\works\templates\works\about.html:14 .\works\templates\works\base.html:31
+#: .\works\templates\works\base.html:89 .\works\templates\works\bio_new.html:23
+#: .\works\templates\works\bio_new.html:164
+#: .\works\templates\works\tests_backups\about_init.html:9
+#: .\works\templates\works\tests_backups\about_new.html:23
+#: .\works\templates\works\tests_backups\about_new.html:169
+#: .\works\templates\works\tests_backups\home_new.html:23
+#: .\works\templates\works\tests_backups\home_new.html:135
 msgid "О проекте"
 msgstr "Կայքի մասին"
 
-#: .\works\templates\works\base.html:27 .\works\templates\works\base.html:85
+#: .\works\templates\works\base.html:29 .\works\templates\works\base.html:87
+#: .\works\templates\works\bio_new.html:21
+#: .\works\templates\works\bio_new.html:162
+#: .\works\templates\works\tests_backups\about_new.html:21
+#: .\works\templates\works\tests_backups\about_new.html:167
+#: .\works\templates\works\tests_backups\home_new.html:21
+#: .\works\templates\works\tests_backups\home_new.html:133
 msgid "Каталог"
 msgstr "Կատալոգ"
 
-#: .\works\templates\works\base.html:28 .\works\templates\works\base.html:86
+#: .\works\templates\works\base.html:30 .\works\templates\works\base.html:88
+#: .\works\templates\works\bio.html:22 .\works\templates\works\bio_new.html:22
+#: .\works\templates\works\bio_new.html:163
+#: .\works\templates\works\tests_backups\about_new.html:22
+#: .\works\templates\works\tests_backups\about_new.html:168
+#: .\works\templates\works\tests_backups\home_new.html:22
+#: .\works\templates\works\tests_backups\home_new.html:134
 msgid "Творчество"
 msgstr "Կենսագրություն"
 
-#: .\works\templates\works\base.html:84
+#: .\works\templates\works\base.html:86
+#: .\works\templates\works\bio_new.html:161
+#: .\works\templates\works\tests_backups\about_new.html:166
+#: .\works\templates\works\tests_backups\home_new.html:132
 msgid "Главная"
 msgstr "Գլխավոր էջ"
 
-#: .\works\templates\works\base.html:93
+#: .\works\templates\works\base.html:95
+#: .\works\templates\works\bio_new.html:170
+#: .\works\templates\works\tests_backups\about_new.html:175
+#: .\works\templates\works\tests_backups\home_new.html:141
 msgid "Условия использования"
 msgstr "Օգտագործման պայմաններ"
 
-#: .\works\templates\works\base.html:95
+#: .\works\templates\works\base.html:97
+#: .\works\templates\works\bio_new.html:172
+#: .\works\templates\works\tests_backups\about_new.html:177
+#: .\works\templates\works\tests_backups\home_new.html:143
 msgid "Материалы этого сайта доступны по лицензии "
 msgstr ""
 
-#: .\works\templates\works\base.html:96
+#: .\works\templates\works\base.html:98
+#: .\works\templates\works\bio_new.html:173
+#: .\works\templates\works\tests_backups\about_new.html:178
+#: .\works\templates\works\tests_backups\home_new.html:144
 msgid ""
 "Материалы с других платформ (например, YouTube), транслируемые на сайт, "
 "могут иметь иные условия использования."
 msgstr ""
 
-#: .\works\templates\works\base.html:97 .\works\templates\works\base.html:109
+#: .\works\templates\works\base.html:99 .\works\templates\works\base.html:111
+#: .\works\templates\works\bio_new.html:174
+#: .\works\templates\works\bio_new.html:186
+#: .\works\templates\works\tests_backups\about_new.html:179
+#: .\works\templates\works\tests_backups\about_new.html:191
+#: .\works\templates\works\tests_backups\home_new.html:145
+#: .\works\templates\works\tests_backups\home_new.html:157
 msgid "Подробнее"
 msgstr ""
 
-#: .\works\templates\works\base.html:102
+#: .\works\templates\works\base.html:104
+#: .\works\templates\works\bio_new.html:179
+#: .\works\templates\works\tests_backups\about_new.html:184
+#: .\works\templates\works\tests_backups\home_new.html:150
 msgid "Контакты"
 msgstr "Հետադարձ կապ"
 
-#: .\works\templates\works\base.html:103
+#: .\works\templates\works\base.html:105
+#: .\works\templates\works\bio_new.html:180
+#: .\works\templates\works\tests_backups\about_new.html:185
+#: .\works\templates\works\tests_backups\home_new.html:151
 msgid "Техническая поддержка: "
 msgstr "Սեխնիկական աջակցություն"
 
-#: .\works\templates\works\base.html:104
+#: .\works\templates\works\base.html:106
+#: .\works\templates\works\bio_new.html:181
+#: .\works\templates\works\tests_backups\about_new.html:186
+#: .\works\templates\works\tests_backups\home_new.html:152
 msgid "По иным вопросам: "
 msgstr ""
 
@@ -112,10 +157,10 @@ msgstr ""
 msgid "Сбросить фильтры"
 msgstr ""
 
-#: .\works\templates\works\home.html:8
+#: .\works\templates\works\tests_backups\home_init.html:8
 msgid "Русская страница"
 msgstr "Հայկական էջ"
 
-#: .\works\templates\works\home.html:10
+#: .\works\templates\works\tests_backups\home_init.html:10
 msgid "Some other text"
 msgstr "Բարարան օնլայն շատ լավ է"
