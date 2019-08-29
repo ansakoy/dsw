@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 11:01+0300\n"
+"POT-Creation-Date: 2019-08-29 11:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,61 +30,67 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\works\templates\works\about.html:14 .\works\templates\works\base.html:31
-#: .\works\templates\works\base.html:89 .\works\templates\works\bio_new.html:23
-#: .\works\templates\works\bio_new.html:164
+#: .\works\templates\works\about.html:5
+msgid "Давид Сакоян и его музыка: О проекте"
+msgstr ""
+
+#: .\works\templates\works\about.html:16 .\works\templates\works\base.html:31
+#: .\works\templates\works\base.html:89
 #: .\works\templates\works\tests_backups\about_init.html:9
 #: .\works\templates\works\tests_backups\about_new.html:23
 #: .\works\templates\works\tests_backups\about_new.html:169
+#: .\works\templates\works\tests_backups\bio_new.html:23
+#: .\works\templates\works\tests_backups\bio_new.html:164
 #: .\works\templates\works\tests_backups\home_new.html:23
 #: .\works\templates\works\tests_backups\home_new.html:135
 msgid "О проекте"
 msgstr "About"
 
 #: .\works\templates\works\base.html:29 .\works\templates\works\base.html:87
-#: .\works\templates\works\bio_new.html:21
-#: .\works\templates\works\bio_new.html:162
 #: .\works\templates\works\tests_backups\about_new.html:21
 #: .\works\templates\works\tests_backups\about_new.html:167
+#: .\works\templates\works\tests_backups\bio_new.html:21
+#: .\works\templates\works\tests_backups\bio_new.html:162
 #: .\works\templates\works\tests_backups\home_new.html:21
 #: .\works\templates\works\tests_backups\home_new.html:133
 msgid "Каталог"
 msgstr "Catalogue"
 
 #: .\works\templates\works\base.html:30 .\works\templates\works\base.html:88
-#: .\works\templates\works\bio.html:22 .\works\templates\works\bio_new.html:22
-#: .\works\templates\works\bio_new.html:163
+#: .\works\templates\works\bio.html:25
 #: .\works\templates\works\tests_backups\about_new.html:22
 #: .\works\templates\works\tests_backups\about_new.html:168
+#: .\works\templates\works\tests_backups\bio_new.html:22
+#: .\works\templates\works\tests_backups\bio_new.html:163
 #: .\works\templates\works\tests_backups\home_new.html:22
 #: .\works\templates\works\tests_backups\home_new.html:134
 msgid "Творчество"
 msgstr "Bio"
 
 #: .\works\templates\works\base.html:86
-#: .\works\templates\works\bio_new.html:161
 #: .\works\templates\works\tests_backups\about_new.html:166
+#: .\works\templates\works\tests_backups\bio_new.html:161
 #: .\works\templates\works\tests_backups\home_new.html:132
 msgid "Главная"
 msgstr "Home"
 
 #: .\works\templates\works\base.html:95
-#: .\works\templates\works\bio_new.html:170
 #: .\works\templates\works\tests_backups\about_new.html:175
+#: .\works\templates\works\tests_backups\bio_new.html:170
 #: .\works\templates\works\tests_backups\home_new.html:141
 msgid "Условия использования"
 msgstr "Terms of use"
 
 #: .\works\templates\works\base.html:97
-#: .\works\templates\works\bio_new.html:172
 #: .\works\templates\works\tests_backups\about_new.html:177
+#: .\works\templates\works\tests_backups\bio_new.html:172
 #: .\works\templates\works\tests_backups\home_new.html:143
 msgid "Материалы этого сайта доступны по лицензии "
 msgstr "Materials of this site are available under "
 
 #: .\works\templates\works\base.html:98
-#: .\works\templates\works\bio_new.html:173
 #: .\works\templates\works\tests_backups\about_new.html:178
+#: .\works\templates\works\tests_backups\bio_new.html:173
 #: .\works\templates\works\tests_backups\home_new.html:144
 msgid ""
 "Материалы с других платформ (например, YouTube), транслируемые на сайт, "
@@ -94,43 +100,51 @@ msgstr ""
 "specific terms of use"
 
 #: .\works\templates\works\base.html:99 .\works\templates\works\base.html:111
-#: .\works\templates\works\bio_new.html:174
-#: .\works\templates\works\bio_new.html:186
 #: .\works\templates\works\tests_backups\about_new.html:179
 #: .\works\templates\works\tests_backups\about_new.html:191
+#: .\works\templates\works\tests_backups\bio_new.html:174
+#: .\works\templates\works\tests_backups\bio_new.html:186
 #: .\works\templates\works\tests_backups\home_new.html:145
 #: .\works\templates\works\tests_backups\home_new.html:157
 msgid "Подробнее"
 msgstr "Detail"
 
 #: .\works\templates\works\base.html:104
-#: .\works\templates\works\bio_new.html:179
 #: .\works\templates\works\tests_backups\about_new.html:184
+#: .\works\templates\works\tests_backups\bio_new.html:179
 #: .\works\templates\works\tests_backups\home_new.html:150
 msgid "Контакты"
 msgstr "Contacts"
 
 #: .\works\templates\works\base.html:105
-#: .\works\templates\works\bio_new.html:180
 #: .\works\templates\works\tests_backups\about_new.html:185
+#: .\works\templates\works\tests_backups\bio_new.html:180
 #: .\works\templates\works\tests_backups\home_new.html:151
 msgid "Техническая поддержка: "
 msgstr "Technical support: "
 
 #: .\works\templates\works\base.html:106
-#: .\works\templates\works\bio_new.html:181
 #: .\works\templates\works\tests_backups\about_new.html:186
+#: .\works\templates\works\tests_backups\bio_new.html:181
 #: .\works\templates\works\tests_backups\home_new.html:152
 msgid "По иным вопросам: "
 msgstr "Otherwise: "
 
-#: .\works\templates\works\base_catalog.html:12
+#: .\works\templates\works\base_catalog.html:4
+msgid "Давид Сакоян и его музыка: Каталог сочинений"
+msgstr "David Sakoyan and his music: Catalogue"
+
+#: .\works\templates\works\base_catalog.html:13
 msgid "Каталог сочинений"
 msgstr "Catalogue"
 
-#: .\works\templates\works\base_catalog.html:15
+#: .\works\templates\works\base_catalog.html:16
 msgid "Найдено сочинений: "
 msgstr "Works found: "
+
+#: .\works\templates\works\bio.html:7
+msgid "Давид Сакоян и его музыка: Творчество"
+msgstr "David Sakoyan and his music: Bio"
 
 #: .\works\templates\works\catalog.html:9
 msgid "Поиск сочинений"
@@ -159,6 +173,10 @@ msgstr "Only works with recordings"
 #: .\works\templates\works\catalog.html:45
 msgid "Сбросить фильтры"
 msgstr "Clear filters"
+
+#: .\works\templates\works\home.html:7
+msgid "Давид Сакоян и его музыка"
+msgstr "David Sakoyan and his music"
 
 #: .\works\templates\works\tests_backups\home_init.html:8
 msgid "Русская страница"
