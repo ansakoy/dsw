@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 14:03+0300\n"
+"POT-Creation-Date: 2019-08-29 14:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -174,7 +174,7 @@ msgstr "Only works with recordings"
 msgid "Сбросить фильтры"
 msgstr "Clear filters"
 
-#: .\works\templates\works\home.html:7
+#: .\works\templates\works\home.html:8
 msgid "Давид Сакоян и его музыка"
 msgstr "David Sakoyan and his music"
 
