@@ -2,9 +2,18 @@
 
 {% load i18n %}
 
-{% block page_content %}
+
 {% get_current_language as LANGUAGE_CODE %}
 
+{% if LANGUAGE_CODE == 'ru' %}
+{% block title %} "Давид Сакоян и его музыка: {{ opus.title_ru }} {{ opus.subtitle_ru }}" {% endblock %}
+{% elif LANGUAGE_CODE == 'hy' %}
+{% block title %} "Դավիթ Սաքոյան և նրա երաժշտություն: {{ opus.title_hy }} {{ opus.subtitle_hy }}" {% endblock %}
+{% else %}
+{% block title %} "David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}" {% endblock %}
+{% endif %}
+
+{% block page_content %}
 <div class="global-container container col-md-8">
 <div class="container pt-5">
     <!--Если opus exists-->
