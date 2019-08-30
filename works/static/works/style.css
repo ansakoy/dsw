@@ -4,6 +4,11 @@
     opacity: 0.6;
 }
 
+li.socmedia {
+    padding-right:30px;
+    font-size: x-large;
+}
+
 /* Footer */
 footer {
     background-color: #343a40;
