@@ -2,60 +2,64 @@
 
 {% load i18n %}
 
-
+<!--title страницы в зависимости от языка-->
 {% block title %}
 {% get_current_language as LANGUAGE_CODE %}
-{% if LANGUAGE_CODE == 'ru' %}
+{% if LANGUAGE_CODE == 'ru' %}  <!-- Если русский -->
 Давид Сакоян и его музыка: {{ opus.title_ru }} {{ opus.subtitle_ru }}
-{% elif LANGUAGE_CODE == 'hy' %}
+{% elif LANGUAGE_CODE == 'hy' %}  <!-- Если армянский -->
 Դավիթ Սաքոյան և նրա երաժշտություն: {{ opus.title_hy }} {{ opus.subtitle_hy }}
-{% else %}
+{% else %}  <!-- Если другой (-> англ.) -->
 David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
-{% endif %}
-{% endblock %}
+{% endif %} <!-- Конец языковых условий -->
+{% endblock %}  <!-- конец блока title -->
 
-{% block page_content %}
+{% block page_content %}  <!-- Блок с содержанием -->
 
 {% get_current_language as LANGUAGE_CODE %}
 
-<div class="global-container container col-md-8">
-<div class="container pt-5">
-    <!--Если opus exists-->
-    {% if opus %}
-    <!--Русский-->
+<div class="global-container container col-md-8">  <!-- глобальный контейнер -->
+<div class="container pt-5 pb-5"> <!-- внутренний контейнер -->
 
+<!--Если opus exists-->
+{% if opus %}
+
+    <!-- Языки -->
+
+    <!--Русский-->
     {% if LANGUAGE_CODE == 'ru' %}
 
-    <div class="opus_header pb-5">
+    <div class="opus_header pb-5">  <!-- Заголовок -->
         <h1 class="opus_title">{{ opus.title_ru }}</h1>
         <h2 class="opus_subtitle">{{ opus.subtitle_ru }}</h2>
-    </div>
+    </div>  <!-- Конец заголовка -->
 
-    <div class="row">
-        <div class="col-md-6 works-results">
+    <div class="row">  <!-- Подробности - row -->
 
-            <div class="container opus">
+        <div class="col-md-6 works-results">  <!-- Колонка с описанием -->
+
+            <div class="container opus">  <!-- Опус -->
                 <p class="opus_year">{{ opus.year }}</p>
-                {% if opus.libretto_by.count == 1 %}
+                {% if opus.libretto_by.count == 1 %}  <!-- Если только один автор либретто -->
                 <p class="opus_libretto">Автор либретто: {{ opus.libretto_by.first.fname_ru }} {{ opus.libretto_by.first.lname_ru }}</p>
-                {% elif opus.libretto_by.count > 1 %}
+                {% elif opus.libretto_by.count > 1 %}  <!-- Или если авторов либретто более 1 -->
                  <ul>
                      <li>Авторы либретто:</li>
                     {% for entry in opus.libretto_by.all %}
                     <li>{{ entry.fname_ru }} {{ entry.lname_ru }}</li>
                     {% endfor %}
                 </ul>
-                {% endif %}
-                {% if opus.lyrics_by.count == 1 %}
+                {% endif %}  <!-- Конец условий по числу авторов либретто -->
+                {% if opus.lyrics_by.count == 1 %}  <!-- Если только один автор текста -->
                 <p class="opus_lyrics">Автор текста: {{ opus.lyrics_by.first.fname_ru }} {{ opus.lyrics_by.first.lname_ru }}</p>
-                {% elif opus.lyrics_by.count > 1 %}
+                {% elif opus.lyrics_by.count > 1 %}  <!-- Или если авторов текста более 1 -->
                  <ul>
                      <li>Авторы текста:</li>
                     {% for entry in opus.lyrics_by.all %}
                     <li>{{ entry.fname_ru }} {{ entry.lname_ru }}</li>
                     {% endfor %}
                 </ul>
-                {% endif %}
+                {% endif %}  <!-- Конец условий по числу авторов текста -->
                 <p class="opus_comment">{{ opus.comment_ru }}</p>
                 <p class="opus_category"> Категория: {{ opus.genre.name_ru }}</p>
                 <hr>
@@ -66,21 +70,98 @@ David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
                     <li>
                         <a href="{% url 'works:opus' work.pk %}">{{ work.title_ru }} - {{ work.subtitle_ru }}</a>
                     </li>
-                {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>  <!-- конец опуса -->
+        </div>  <!-- Конец колонки с описанием -->
+        <hr>
+
+        <div class="container col-md-6 filter-panel">  <!--Колонка для исполнений-->
+            <div class="performances">  <!--Место для исполнений-->
+                {% if opus.performances.count %} <!--Если есть исполнения-->
+                    {% for performance in opus.performances.all|dictsort:"pk" %}
+                        <div>  <!--Детали исполнений исполнений-->
+                            {% if performance.name_ru %}<h2 class="performance-name">{{ performance.name_ru }}</h2>{% endif %} <!--у исполнения есть название-->
+                            {% if performance.video_url%} <!--Если есть ссылка на видео-->
+                                <iframe width="500" height="281.25" src="https://www.youtube.com/embed/{{ performance.video_url }}" frameborder="0"></iframe>
+                            {% endif %}  <!--конец условия - Если есть ссылка на видео-->
+                            {% if performance.perform_date%}  <!--Если есть дата исполнения-->
+                                <p>{{ performance.perform_date }}</p>
+                            {% endif %}  <!--конец условия - Если есть дата исполнения-->
+                            {% if performance.band %}  <!--Если есть информация об ансамбле-->
+                                <p>{{ performance.band.type_ru }} {{ performance.band.name_ru }}</p>
+                            {% endif %}  <!--конец условия - Если есть информация об ансамбле-->
+                            {% if performance.conductor %} <!--Если есть информация о дирижере-->
+                                <p>Дирижер {{ performance.conductor.fname_ru }} {{ performance.conductor.lname_ru }}</p>
+                            {% endif %} <!--конец условия - Если есть информация о дирижере-->
+                            {% if performance.performers.count %} <!--Если есть исполнители-->
+                                {% for performer in performance.performers.all %}
+                                <p>{{ performer.role_ru }} - {{ performer.performer.fname_ru }} {{ performer.performer.lname_ru }}</p>
+                                {% endfor %}
+                            {% endif %} <!--конец условия - Если есть исполнители-->
+                        </div>  <!--Конец деталей исполнений -->
+                    {% endfor %}
+                {% endif %}
+            </div>  <!--Конец места для исполнений-->
+        </div>  <!--Конец колонки для исполнений-->
+
+    </div>  <!-- Конец row -->
+
+    <!-- Armenian version -->
+    {% elif LANGUAGE_CODE == 'hy' %}
+
+    <div class="opus_header pb-5">
+        <h1 class="opus_title">{{ opus.title_hy }}</h1>
+        <h2 class="opus_subtitle">{{ opus.subtitle_hy }}</h2>
+    </div>
+
+    <div class="row">  <!-- Подробности - row -->
+        <div class="col-md-6 works-results">  <!-- Колонка с описанием -->
+
+            <div class="container opus">  <!-- Опус -->
+                <p class="opus_year">{{ opus.year }}</p>
+                {% if opus.libretto_by.count == 1 %}
+                <p class="opus_libretto">Լիբրետոն. {{ opus.libretto_by.first.fname_hy }} {{ opus.libretto_by.first.lname_hy }}</p>
+                {% elif opus.libretto_by.count > 1 %}
+                 <ul>
+                     <li>Լիբրետոն.</li>
+                    {% for entry in opus.libretto_by.all %}
+                    <li>{{ entry.fname_hy }} {{ entry.lname_hy }}</li>
+                    {% endfor %}
                 </ul>
                 {% endif %}
-            </div>
-        </div>
-            <hr>
+                {% if opus.lyrics_by.count == 1 %}
+                <p class="opus_lyrics">Խոսք. {{ opus.lyrics_by.first.fname_hy }} {{ opus.lyrics_by.first.lname_hy }}</p>
+                {% elif opus.lyrics_by.count > 1 %}
+                 <ul>
+                     <li>Խոսք.</li>
+                    {% for entry in opus.lyrics_by.all %}
+                    <li>{{ entry.fname_hy }} {{ entry.lname_hy }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="opus_comment">{{ opus.comment_hy }}</p>
+                <p class="opus_category"> Կարգ. {{ opus.genre.name_hy }}</p>
+                <hr>
+                <p>Նաև.</p>
+                <ul class="other-works">
 
-        <!--Колонка для исполнений-->
+                    {% for work in related_works %}
+                    <li>
+                        <a href="{% url 'works:opus' work.pk %}">{{ work.title_hy }} - {{ work.subtitle_hy }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>  <!-- Конец опуса -->
+        </div>  <!-- Конец колонки с описанием -->
+        <hr>
 
-        <div class="container col-md-6 filter-panel">
-            <div class="performances">
+        <div class="container col-md-6 filter-panel">  <!--Колонка для исполнений-->
+            <div class="performances">  <!--Место для исполнений-->
                 {% if opus.performances.count %}
                     {% for performance in opus.performances.all|dictsort:"pk" %}
-                        <div>
-                            {% if performance.name_ru %}<h2 class="performance-name">{{ performance.name_ru }}</h2>{% endif %}
+                        <div>  <!--Детали исполнений исполнений-->
+                            {% if performance.name_hy %}<h2 class="performance-name">{{ performance.name_hy }}</h2>{% endif %}
                             {% if performance.video_url%}
                                 <iframe width="500" height="281.25" src="https://www.youtube.com/embed/{{ performance.video_url }}" frameborder="0"></iframe>
                             {% endif %}
@@ -88,28 +169,114 @@ David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
                                 <p>{{ performance.perform_date }}</p>
                             {% endif %}
                             {% if performance.band %}
-                                <p>{{ performance.band.type_ru }} {{ performance.band.name_ru }}</p>
+                                <p>{{ performance.band.type_hy }} {{ performance.band.name_hy }}</p>
                             {% endif %}
                             {% if performance.conductor %}
-                                <p>Дирижер {{ performance.conductor.fname_ru }} {{ performance.conductor.lname_ru }}</p>
+                                <p>Դիրիժոր {{ performance.conductor.fname_hy }} {{ performance.conductor.lname_hy }}</p>
                             {% endif %}
                             {% if performance.performers.count %}
                                 {% for performer in performance.performers.all %}
-                                <p>{{ performer.role_ru }} - {{ performer.performer.fname_ru }} {{ performer.performer.lname_ru }}</p>
+                                <p>{{ performer.role_hy }} - {{ performer.performer.fname_hy }} {{ performer.performer.lname_hy }}</p>
                                 {% endfor %}
                             {% endif %}
-                        </div>
+                        </div>  <!--Конец деталей исполнений -->
                     {% endfor %}
                 {% endif %}
-            </div>
-        </div>
+            </div>  <!--Конец места для исполнений -->
+        </div>  <!--Конец колонки для исполнений-->
+    </div>  <!-- Конец row -->
 
-        </div>
-    <!--Если opus does not exist-->
-    {% else %}
-    <div>Такого сочинения в каталоге нет</div>
-    {% endif %}
+    <!-- English version -->
+    {% elif LANGUAGE_CODE == 'en' %}
+
+    <div class="opus_header pb-5">
+        <h1 class="opus_title">{{ opus.title_en }}</h1>
+        <h2 class="opus_subtitle">{{ opus.subtitle_en }}</h2>
     </div>
-</div>
 
-{% endblock %}
+    <div class="row">  <!-- Подробности - row -->
+        <div class="col-md-6 works-results">  <!-- Колонка с описанием -->
+
+            <div class="container opus">  <!-- Опус -->
+                <p class="opus_year">{{ opus.year }}</p>
+                {% if opus.libretto_by.count == 1 %}
+                <p class="opus_libretto">Libretto by: {{ opus.libretto_by.first.fname_en }} {{ opus.libretto_by.first.lname_en }}</p>
+                {% elif opus.libretto_by.count > 1 %}
+                 <ul>
+                     <li>Libretto by:</li>
+                    {% for entry in opus.libretto_by.all %}
+                    <li>{{ entry.fname_en }} {{ entry.lname_en }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if opus.lyrics_by.count == 1 %}
+                <p class="opus_lyrics">Lyrics by: {{ opus.lyrics_by.first.fname_en }} {{ opus.lyrics_by.first.lname_en }}</p>
+                {% elif opus.lyrics_by.count > 1 %}
+                 <ul>
+                     <li>Lyrics by:</li>
+                    {% for entry in opus.lyrics_by.all %}
+                    <li>{{ entry.fname_en }} {{ entry.lname_en }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="opus_comment">{{ opus.comment_en }}</p>
+                <p class="opus_category"> Category: {{ opus.genre.name_en }}</p>
+                <hr>
+                <p>Also in this category:</p>
+                <ul class="other-works">
+
+                    {% for work in related_works %}
+                    <li>
+                        <a href="{% url 'works:opus' work.pk %}">{{ work.title_en }} - {{ work.subtitle_en }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>  <!-- Конец опуса -->
+        </div>  <!-- Конец колонки с описанием -->
+        <hr>
+
+        <!--Колонка для исполнений-->
+
+        <div class="container col-md-6 filter-panel">  <!--Колонка для исполнений-->
+            <div class="performances">  <!--Место для исполнений-->
+                {% if opus.performances.count %}
+                    {% for performance in opus.performances.all|dictsort:"pk" %}
+                        <div>  <!--Детали исполнений исполнений-->
+                            {% if performance.name_en %}<h2 class="performance-name">{{ performance.name_en }}</h2>{% endif %}
+                            {% if performance.video_url%}
+                                <iframe width="500" height="281.25" src="https://www.youtube.com/embed/{{ performance.video_url }}" frameborder="0"></iframe>
+                            {% endif %}
+                            {% if performance.perform_date%}
+                                <p>{{ performance.perform_date }}</p>
+                            {% endif %}
+                            {% if performance.band %}
+                                <p>{{ performance.band.type_en }} {{ performance.band.name_en }}</p>
+                            {% endif %}
+                            {% if performance.conductor %}
+                                <p>Conductor {{ performance.conductor.fname_en }} {{ performance.conductor.lname_en }}</p>
+                            {% endif %}
+                            {% if performance.performers.count %}
+                                {% for performer in performance.performers.all %}
+                                <p>{{ performer.role_en }} - {{ performer.performer.fname_en }} {{ performer.performer.lname_en }}</p>
+                                {% endfor %}
+                            {% endif %}
+                        </div>  <!--Конец деталей исполнений -->
+                    {% endfor %}
+                {% endif %}
+            </div>  <!--Конец места для исполнений-->
+        </div>  <!--Конец колонки для исполнений-->
+    </div>  <!-- Конец row -->
+
+    {% endif %} <!-- End language conditions -->
+
+<!--Если opus does not exist-->
+{% else %}
+
+    <div>Такого сочинения в каталоге нет</div>
+
+{% endif %} <!--Конец условия opus exists-->
+
+</div>  <!-- конец внутреннего контейнера -->
+</div>  <!-- Конец глобального контейнера -->
+
+{% endblock %}  <!-- Конец блока с содержанием -->
