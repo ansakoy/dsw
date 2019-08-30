@@ -145,23 +145,23 @@ msgstr "Դավիթ Սաքոյան և նրա երաժշտություն: Կենս
 
 #: .\works\templates\works\catalog.html:9
 msgid "Поиск сочинений"
-msgstr ""
+msgstr "Փնտրել երկեր"
 
 #: .\works\templates\works\catalog.html:14
 msgid "Категория"
-msgstr ""
+msgstr "Կարգ"
 
 #: .\works\templates\works\catalog.html:17
 msgid "Все категории"
-msgstr ""
+msgstr "Բոլոր"
 
 #: .\works\templates\works\catalog.html:26
 msgid "Год"
-msgstr ""
+msgstr "Տարեթիվ"
 
 #: .\works\templates\works\catalog.html:28
 msgid "Все годы"
-msgstr ""
+msgstr "Բոլոր"
 
 #: .\works\templates\works\catalog.html:38
 msgid "Только сочинения с записями"

@@ -139,7 +139,6 @@ def get_context_for_filters(request):
         output[PERFORM_INFO] = '1'
         data = data.filter(performances__isnull=False)
     if keys:
-        print(keys)
         output[SEARCH_INFO] = keys
         vector = SearchVector('title_ru', 'title_hy', 'title_en',
                               'subtitle_ru', 'subtitle_hy', 'subtitle_en',
@@ -148,13 +147,10 @@ def get_context_for_filters(request):
         data = data.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
     if '/ru/' in path:
         categories = Genre.objects.filter(pk__in=[entry.genre.genre_id for entry in data]).order_by('name_ru')
-        # categories = Genre.objects.order_by('name_ru')
     elif '/hy/' in path:
         categories = Genre.objects.filter(pk__in=[entry.genre.genre_id for entry in data]).order_by('name_hy')
-        # categories = Genre.objects.order_by('name_hy')
     else:
         categories = Genre.objects.filter(pk__in=[entry.genre.genre_id for entry in data]).order_by('name_en')
-        # categories = Genre.objects.order_by('name_en')
 
     years = [entry['year'] for entry in data.order_by('year').values('year').distinct()]
     # years = [entry['year'] for entry in Opus.objects.order_by('year').values('year').distinct()]

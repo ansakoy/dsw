@@ -11,10 +11,6 @@
 
 {% get_current_language as LANGUAGE_CODE %}
 
-{% comment %}
-<h2>{{ LANGUAGE_CODE }}</h2>
-{% endcomment %}
-
 <!--<page_content>-->
 
 <!--<global-container>-->
@@ -31,10 +27,15 @@
         <!--<bio-general-row>-->
         <div class="row page-section mt-4" id="bio-general">
 
-            <div class="col-md-12 pt-3">
+            <div class="col-md-7 pt-3">
                 <div class="paragraph-contents">
-                    <img align="right" src='{% static "works/Sakoyan2.JPG" %}' width="300" alt="David Sakoyan">
                     {{ general.text|safe }}
+                </div>
+            </div><!--<end-col>-->
+
+            <div class="col-md-5 pt-3">
+                <div class="paragraph-contents">
+                    <img align="right" src='{% static "works/Sakoyan2.JPG" %}' width="250" alt="David Sakoyan">
                 </div>
             </div><!--<end-col>-->
 
