@@ -49,6 +49,51 @@
 
                     </tr>
                 {% endfor %}
+
+                {% elif LANGUAGE_CODE == 'hy' %}
+
+                {% for opus in works %}
+                    <tr>
+
+                        <td>
+                            {% if opus.performances.count %}
+                                <a href="{% url 'works:opus' opus.pk %}" class="performance-marker"><i class="fas fa-music"></i></a>
+                            {% endif %}
+                        </td>
+
+                        <td>
+                            <div class="container opus">
+                                <h3><a href="{% url 'works:opus' opus.pk %}" class="opus-title">{{ opus.title_hy }}</a></h3>
+                                <h4 class="opus_subtitle">{{ opus.subtitle_hy }}</h4>
+                                <p class="opus_year">{{ opus.year }}</p>
+                            </div>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+
+                {% else %}
+
+                {% for opus in works %}
+                    <tr>
+
+                        <td>
+                            {% if opus.performances.count %}
+                                <a href="{% url 'works:opus' opus.pk %}" class="performance-marker"><i class="fas fa-music"></i></a>
+                            {% endif %}
+                        </td>
+
+                        <td>
+                            <div class="container opus">
+                                <h3><a href="{% url 'works:opus' opus.pk %}" class="opus-title">{{ opus.title_en }}</a></h3>
+                                <h4 class="opus_subtitle">{{ opus.subtitle_en }}</h4>
+                                <p class="opus_year">{{ opus.year }}</p>
+                            </div>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+
                 {% endif %}
 
                 <!-- /Русский -->
