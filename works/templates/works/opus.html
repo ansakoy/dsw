@@ -60,7 +60,7 @@ David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
                     {% endfor %}
                 </ul>
                 {% endif %}  <!-- Конец условий по числу авторов текста -->
-                <p class="opus_comment">{{ opus.comment_ru }}</p>
+                {% if opus.comment_ru %} <p class="opus_comment"> {{ opus.comment_ru }} </p> {% endif %}
                 <p class="opus_category"> Категория: {{ opus.genre.name_ru }}</p>
                 <hr>
                 <p>Другие сочинения в этой категории:</p>
@@ -136,11 +136,11 @@ David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
                  <ul>
                      <li>Խոսք.</li>
                     {% for entry in opus.lyrics_by.all %}
-                    <li>{{ entry.fname_hy }} {{ entry.lname_hy }}</li>
+                    <li>{{ entry.fname_hy }} {{ entry.lname_hy }} </li>
                     {% endfor %}
                 </ul>
                 {% endif %}
-                <p class="opus_comment">{{ opus.comment_hy }}</p>
+                {% if opus.comment_hy %} <p class="opus_comment"> {{ opus.comment_hy }} </p>{% endif %}
                 <p class="opus_category"> Կարգ. {{ opus.genre.name_hy }}</p>
                 <hr>
                 <p>Նաև.</p>
@@ -219,7 +219,7 @@ David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
                     {% endfor %}
                 </ul>
                 {% endif %}
-                <p class="opus_comment">{{ opus.comment_en }}</p>
+                {% if opus.comment_en %} <p class="opus_comment"> {{ opus.comment_en }} </p> {% endif %}
                 <p class="opus_category"> Category: {{ opus.genre.name_en }}</p>
                 <hr>
                 <p>Also in this category:</p>
