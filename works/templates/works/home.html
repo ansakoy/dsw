@@ -10,6 +10,46 @@
 
 {% block page_content %}
 
+<!--MODAL FOR ARMENIAN-->
+{% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == 'hy' %}  <!--Если выбран армянский язык-->
+
+<div class="container">  <!--Modal container-->
+    <div class="row">  <!--row-->
+        <div class="col-md-12">  <!--col-->
+            <div class="modal fade" id="hy_modal">  <!--modal box-->
+                <div class="modal-dialog modal-lg">  <!--modal-dialog-->
+                    <div class="modal-content">  <!--modal-content-->
+                        <div class="modal-header">  <!--modal-header-->
+                            <h2>Որտե՞ղ է հայերեն:<br>Где армянский?<br>Where's Armenian?</h2>
+                        </div>  <!--end modal-header-->
+                        <div class="modal-body">  <!--modal-body-->
+                            <p id="modal_ru">
+                                К сожалению, у автора сайта пока не хватает знания армянского языка, чтобы перевести все разделы.
+                                В настоящий момент армянская версия есть только у раздела "Каталог". Со временем будут переведены и другие.
+                                Если вы готовы помочь с переводом и тем самым ускорить процесс, пожалуйста, напишите об этом на <a class="footer-menu" href="mailto:info@davidsakoyan.com">info@davidsakoyan.com</a>.
+                            </p>
+                            <p id="modal_en">
+                                Unfortunately, the site creator's knowledge of Armenian is not yet sufficient for the translation of all the sections.
+                                Only the Catalogue has an Armenian version at the moment. Gradually, all the rest is going to be translated as well.
+                                If you can help here and speeden up the process, please contact me via <a class="footer-menu" href="mailto:info@davidsakoyan.com">info@davidsakoyan.com</a>.
+                            </p>
+                        </div> <!--end modal-body-->
+                        <div class="modal-footer">  <!--modal-footer-->
+                            <input class="btn btn-success" data-dismiss="modal" value="Դե լավ | Ладно | OK">
+                        </div> <!--end modal-footer-->
+                    </div><!--end modal-content-->
+                </div>  <!--end modal-dialog-->
+            </div>  <!--end modal box-->
+            <a class="btn btn-danger" href="#" role="button" data-toggle="modal" data-target="#hy_modal">
+                Որտե՞ղ է հայերեն: | Где армянский? | Where's Armenian?
+            </a>
+        </div>  <!--end col-->
+    </div>  <!--end row-->
+</div>  <!--End Modal container-->
+
+{% endif %}  <!--Конец условия - Если выбран армянский язык-->
+
 <!--<page_content>-->
 
 <!--<global-container>-->
