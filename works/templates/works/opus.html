@@ -5,13 +5,13 @@
 <!--title страницы в зависимости от языка-->
 {% block title %}
 {% get_current_language as LANGUAGE_CODE %}
-{% if LANGUAGE_CODE == 'ru' %}  <!-- Если русский -->
+{% if LANGUAGE_CODE == 'ru' %}
 Давид Сакоян и его музыка: {{ opus.title_ru }} {{ opus.subtitle_ru }}
-{% elif LANGUAGE_CODE == 'hy' %}  <!-- Если армянский -->
+{% elif LANGUAGE_CODE == 'hy' %}
 Դավիթ Սաքոյան և նրա երաժշտություն: {{ opus.title_hy }} {{ opus.subtitle_hy }}
-{% else %}  <!-- Если другой (-> англ.) -->
+{% else %}
 David Sakoyan and his music: {{ opus.title_en }} {{ opus.subtitle_en }}
-{% endif %} <!-- Конец языковых условий -->
+{% endif %}
 {% endblock %}  <!-- конец блока title -->
 
 {% block page_content %}  <!-- Блок с содержанием -->

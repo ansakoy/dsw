@@ -118,7 +118,7 @@ msgstr "Հետադարձ կապ"
 #: .\works\templates\works\tests_backups\bio_new.html:180
 #: .\works\templates\works\tests_backups\home_new.html:151
 msgid "Техническая поддержка: "
-msgstr "Սեխնիկական աջակցություն"
+msgstr "Սեխնիկական աջակցություն. "
 
 #: .\works\templates\works\base.html:105
 #: .\works\templates\works\tests_backups\about_new.html:186
