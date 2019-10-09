@@ -31,7 +31,7 @@ msgstr ""
 
 #: .\works\templates\works\about.html:5
 msgid "Давид Сакоян и его музыка: О проекте"
-msgstr "Դավիթ Սաքոյան և նրա երաժշտություն: Կայքի մասին"
+msgstr "Դավիթ Սաքոյանը և նրա երաժշտությունը: Կայքի մասին"
 
 #: .\works\templates\works\about.html:16 .\works\templates\works\base.html:30
 #: .\works\templates\works\base.html:88
@@ -53,7 +53,7 @@ msgstr "Կայքի մասին"
 #: .\works\templates\works\tests_backups\home_new.html:21
 #: .\works\templates\works\tests_backups\home_new.html:133
 msgid "Каталог"
-msgstr "Կատալոգ"
+msgstr "Անվանացանկ"
 
 #: .\works\templates\works\base.html:29 .\works\templates\works\base.html:87
 #: .\works\templates\works\bio.html:25
@@ -129,11 +129,11 @@ msgstr ""
 
 #: .\works\templates\works\base_catalog.html:4
 msgid "Давид Сакоян и его музыка: Каталог сочинений"
-msgstr "Դավիթ Սաքոյան և նրա երաժշտություն: Կատալոգ"
+msgstr "Դավիթ Սաքոյանը և նրա երաժշտությունը: Անվանացանկ"
 
 #: .\works\templates\works\base_catalog.html:13
 msgid "Каталог сочинений"
-msgstr "Կատալոգ"
+msgstr "Անվանացանկ"
 
 #: .\works\templates\works\base_catalog.html:16
 msgid "Найдено сочинений: "
